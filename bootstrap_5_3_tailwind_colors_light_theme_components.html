@@ -1,0 +1,2097 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" data-tw-accent="indigo">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5.3 All Components — Tailwind OKLCH Light Theme</title>
+
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.9 CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* ==========================================================================
+         1. TAILWIND CSS v4 OKLCH COLOR PALETTE (LIGHT THEME ONLY)
+         ========================================================================== */
+      :root {
+        /* Slate (Neutral Foundation) */
+        --color-slate-50: oklch(98.4% 0.003 247.858);
+        --color-slate-100: oklch(96.8% 0.007 247.896);
+        --color-slate-200: oklch(92.9% 0.013 255.508);
+        --color-slate-300: oklch(86.9% 0.022 252.894);
+        --color-slate-400: oklch(70.4% 0.04 256.788);
+        --color-slate-500: oklch(55.4% 0.046 257.417);
+        --color-slate-600: oklch(44.6% 0.043 257.281);
+        --color-slate-700: oklch(37.2% 0.044 257.287);
+        --color-slate-800: oklch(27.9% 0.041 260.031);
+        --color-slate-900: oklch(20.8% 0.042 265.755);
+        --color-slate-950: oklch(12.9% 0.042 264.695);
+
+        /* Indigo */
+        --color-indigo-50: oklch(96.2% 0.018 272.314);
+        --color-indigo-100: oklch(93% 0.034 272.788);
+        --color-indigo-200: oklch(87% 0.065 274.039);
+        --color-indigo-300: oklch(78.5% 0.115 274.713);
+        --color-indigo-400: oklch(67.3% 0.182 276.935);
+        --color-indigo-500: oklch(58.5% 0.233 277.117);
+        --color-indigo-600: oklch(51.1% 0.262 276.966);
+        --color-indigo-700: oklch(45.7% 0.24 277.023);
+        --color-indigo-800: oklch(39.8% 0.195 277.366);
+        --color-indigo-900: oklch(35.9% 0.144 278.697);
+
+        /* Sky */
+        --color-sky-50: oklch(97.7% 0.013 236.62);
+        --color-sky-100: oklch(95.1% 0.026 236.824);
+        --color-sky-200: oklch(90.1% 0.058 230.902);
+        --color-sky-300: oklch(82.8% 0.111 230.318);
+        --color-sky-400: oklch(74.6% 0.16 232.661);
+        --color-sky-500: oklch(68.5% 0.169 237.323);
+        --color-sky-600: oklch(58.8% 0.158 241.966);
+        --color-sky-700: oklch(50% 0.134 242.749);
+        --color-sky-800: oklch(44.3% 0.11 240.79);
+        --color-sky-900: oklch(39.1% 0.09 240.876);
+
+        /* Emerald */
+        --color-emerald-50: oklch(97.9% 0.021 166.113);
+        --color-emerald-100: oklch(95% 0.052 163.051);
+        --color-emerald-200: oklch(90.5% 0.093 164.15);
+        --color-emerald-300: oklch(84.5% 0.143 164.978);
+        --color-emerald-400: oklch(76.5% 0.177 163.223);
+        --color-emerald-500: oklch(69.6% 0.17 162.48);
+        --color-emerald-600: oklch(59.6% 0.145 163.225);
+        --color-emerald-700: oklch(50.8% 0.118 165.612);
+        --color-emerald-800: oklch(43.2% 0.095 166.913);
+        --color-emerald-900: oklch(37.8% 0.077 168.94);
+
+        /* Amber */
+        --color-amber-50: oklch(98.7% 0.022 95.277);
+        --color-amber-100: oklch(96.2% 0.059 95.617);
+        --color-amber-200: oklch(92.4% 0.12 95.746);
+        --color-amber-300: oklch(87.9% 0.169 91.605);
+        --color-amber-400: oklch(82.8% 0.189 84.429);
+        --color-amber-500: oklch(76.9% 0.188 70.08);
+        --color-amber-600: oklch(66.6% 0.179 58.318);
+        --color-amber-700: oklch(55.5% 0.163 48.998);
+        --color-amber-800: oklch(47.3% 0.137 46.201);
+        --color-amber-950: oklch(27.9% 0.077 45.635);
+
+        /* Rose */
+        --color-rose-50: oklch(96.9% 0.015 12.422);
+        --color-rose-100: oklch(94.1% 0.03 12.58);
+        --color-rose-200: oklch(89.2% 0.058 10.001);
+        --color-rose-300: oklch(81% 0.117 11.638);
+        --color-rose-400: oklch(71.2% 0.194 13.428);
+        --color-rose-500: oklch(64.5% 0.246 16.439);
+        --color-rose-600: oklch(58.6% 0.253 17.585);
+        --color-rose-700: oklch(51.4% 0.222 16.935);
+        --color-rose-800: oklch(45.5% 0.188 13.697);
+        --color-rose-900: oklch(41% 0.159 10.272);
+
+        /* Violet */
+        --color-violet-50: oklch(96.9% 0.016 293.756);
+        --color-violet-100: oklch(94.3% 0.029 294.588);
+        --color-violet-200: oklch(89.4% 0.057 293.283);
+        --color-violet-300: oklch(81.1% 0.111 293.571);
+        --color-violet-400: oklch(70.2% 0.183 293.541);
+        --color-violet-500: oklch(60.6% 0.25 292.717);
+        --color-violet-600: oklch(54.1% 0.281 293.009);
+        --color-violet-700: oklch(49.1% 0.27 292.581);
+        --color-violet-800: oklch(43.2% 0.232 292.759);
+
+        /* Orange */
+        --color-orange-50: oklch(98% 0.016 73.684);
+        --color-orange-100: oklch(95.4% 0.038 75.164);
+        --color-orange-200: oklch(90.1% 0.076 70.697);
+        --color-orange-300: oklch(83.7% 0.128 66.29);
+        --color-orange-400: oklch(75% 0.183 55.934);
+        --color-orange-500: oklch(70.5% 0.213 47.604);
+        --color-orange-600: oklch(64.6% 0.222 41.116);
+        --color-orange-700: oklch(55.3% 0.195 38.402);
+        --color-orange-800: oklch(47% 0.157 37.304);
+
+        /* Teal */
+        --color-teal-50: oklch(98.4% 0.014 180.72);
+        --color-teal-500: oklch(70.4% 0.14 182.503);
+        --color-teal-600: oklch(60% 0.118 184.704);
+
+        --color-white: #ffffff;
+
+        /* ==========================================================================
+           2. ACTIVE TAILWIND ACCENT TOKENS (Default: Indigo)
+           ========================================================================== */
+        --tw-accent-50: var(--color-indigo-50);
+        --tw-accent-100: var(--color-indigo-100);
+        --tw-accent-200: var(--color-indigo-200);
+        --tw-accent-300: var(--color-indigo-300);
+        --tw-accent-400: var(--color-indigo-400);
+        --tw-accent-500: var(--color-indigo-500);
+        --tw-accent-600: var(--color-indigo-600);
+        --tw-accent-700: var(--color-indigo-700);
+        --tw-accent-800: var(--color-indigo-800);
+        --tw-accent-rgb: 79, 70, 229;
+
+        /* ==========================================================================
+           3. BOOTSTRAP 5.3 SEMANTIC COLOR OVERRIDES (LIGHT THEME ONLY)
+           ========================================================================== */
+        --bs-font-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+        --bs-font-monospace: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+        --bs-primary: var(--tw-accent-600);
+        --bs-primary-rgb: var(--tw-accent-rgb);
+        --bs-secondary: var(--color-slate-600);
+        --bs-secondary-rgb: 71, 85, 105;
+        --bs-success: var(--color-emerald-600);
+        --bs-success-rgb: 5, 150, 105;
+        --bs-info: var(--color-sky-500);
+        --bs-info-rgb: 14, 165, 233;
+        --bs-warning: var(--color-amber-500);
+        --bs-warning-rgb: 245, 158, 11;
+        --bs-danger: var(--color-rose-600);
+        --bs-danger-rgb: 225, 29, 72;
+        --bs-light: var(--color-slate-100);
+        --bs-light-rgb: 241, 245, 249;
+        --bs-dark: var(--color-slate-800);
+        --bs-dark-rgb: 30, 41, 59;
+
+        /* Subtle Backgrounds, Borders & Text Emphasis */
+        --bs-primary-text-emphasis: var(--tw-accent-800);
+        --bs-primary-bg-subtle: var(--tw-accent-50);
+        --bs-primary-border-subtle: var(--tw-accent-200);
+
+        --bs-secondary-text-emphasis: var(--color-slate-800);
+        --bs-secondary-bg-subtle: var(--color-slate-100);
+        --bs-secondary-border-subtle: var(--color-slate-200);
+
+        --bs-success-text-emphasis: var(--color-emerald-800);
+        --bs-success-bg-subtle: var(--color-emerald-50);
+        --bs-success-border-subtle: var(--color-emerald-200);
+
+        --bs-info-text-emphasis: var(--color-sky-800);
+        --bs-info-bg-subtle: var(--color-sky-50);
+        --bs-info-border-subtle: var(--color-sky-200);
+
+        --bs-warning-text-emphasis: var(--color-amber-800);
+        --bs-warning-bg-subtle: var(--color-amber-50);
+        --bs-warning-border-subtle: var(--color-amber-200);
+
+        --bs-danger-text-emphasis: var(--color-rose-800);
+        --bs-danger-bg-subtle: var(--color-rose-50);
+        --bs-danger-border-subtle: var(--color-rose-200);
+
+        /* Surfaces, Typography & Borders (Pure Light Theme — Tailwind Slate) */
+        --bs-body-color: var(--color-slate-900);
+        --bs-body-color-rgb: 15, 23, 42;
+        --bs-body-bg: var(--color-slate-50);
+        --bs-body-bg-rgb: 248, 250, 252;
+        --bs-emphasis-color: var(--color-slate-950);
+        --bs-secondary-color: var(--color-slate-600);
+        --bs-secondary-bg: var(--color-slate-100);
+        --bs-tertiary-color: var(--color-slate-500);
+        --bs-tertiary-bg: var(--color-slate-50);
+
+        --bs-border-color: var(--color-slate-200);
+        --bs-border-color-translucent: oklch(20.8% 0.042 265.755 / 0.1);
+        --bs-link-color: var(--tw-accent-600);
+        --bs-link-hover-color: var(--tw-accent-700);
+        --bs-focus-ring-color: rgba(var(--tw-accent-rgb), 0.22);
+
+        --bs-border-radius: 0.625rem;
+        --bs-border-radius-lg: 0.875rem;
+        --bs-border-radius-xl: 1.25rem;
+      }
+
+      /* Switchable Tailwind Primary Accents (Light Theme) */
+      [data-tw-accent='sky'] {
+        --tw-accent-50: var(--color-sky-50);
+        --tw-accent-100: var(--color-sky-100);
+        --tw-accent-200: var(--color-sky-200);
+        --tw-accent-300: var(--color-sky-300);
+        --tw-accent-400: var(--color-sky-400);
+        --tw-accent-500: var(--color-sky-500);
+        --tw-accent-600: var(--color-sky-600);
+        --tw-accent-700: var(--color-sky-700);
+        --tw-accent-800: var(--color-sky-800);
+        --tw-accent-rgb: 2, 132, 199;
+      }
+
+      [data-tw-accent='emerald'] {
+        --tw-accent-50: var(--color-emerald-50);
+        --tw-accent-100: var(--color-emerald-100);
+        --tw-accent-200: var(--color-emerald-200);
+        --tw-accent-300: var(--color-emerald-300);
+        --tw-accent-400: var(--color-emerald-400);
+        --tw-accent-500: var(--color-emerald-500);
+        --tw-accent-600: var(--color-emerald-600);
+        --tw-accent-700: var(--color-emerald-700);
+        --tw-accent-800: var(--color-emerald-800);
+        --tw-accent-rgb: 5, 150, 105;
+      }
+
+      [data-tw-accent='violet'] {
+        --tw-accent-50: var(--color-violet-50);
+        --tw-accent-100: var(--color-violet-100);
+        --tw-accent-200: var(--color-violet-200);
+        --tw-accent-300: var(--color-violet-300);
+        --tw-accent-400: var(--color-violet-400);
+        --tw-accent-500: var(--color-violet-500);
+        --tw-accent-600: var(--color-violet-600);
+        --tw-accent-700: var(--color-violet-700);
+        --tw-accent-800: var(--color-violet-800);
+        --tw-accent-rgb: 124, 58, 237;
+      }
+
+      [data-tw-accent='rose'] {
+        --tw-accent-50: var(--color-rose-50);
+        --tw-accent-100: var(--color-rose-100);
+        --tw-accent-200: var(--color-rose-200);
+        --tw-accent-300: var(--color-rose-300);
+        --tw-accent-400: var(--color-rose-400);
+        --tw-accent-500: var(--color-rose-500);
+        --tw-accent-600: var(--color-rose-600);
+        --tw-accent-700: var(--color-rose-700);
+        --tw-accent-800: var(--color-rose-800);
+        --tw-accent-rgb: 225, 29, 72;
+      }
+
+      [data-tw-accent='orange'] {
+        --tw-accent-50: var(--color-orange-50);
+        --tw-accent-100: var(--color-orange-100);
+        --tw-accent-200: var(--color-orange-200);
+        --tw-accent-300: var(--color-orange-300);
+        --tw-accent-400: var(--color-orange-400);
+        --tw-accent-500: var(--color-orange-500);
+        --tw-accent-600: var(--color-orange-600);
+        --tw-accent-700: var(--color-orange-700);
+        --tw-accent-800: var(--color-orange-800);
+        --tw-accent-rgb: 234, 88, 12;
+      }
+
+      /* ==========================================================================
+         4. BOOTSTRAP COMPONENT OVERRIDES (TAILWIND OKLCH LIGHT THEME)
+         ========================================================================== */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--bs-font-sans-serif);
+        background-color: var(--color-slate-50);
+        color: var(--color-slate-900);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      .font-mono {
+        font-family: var(--bs-font-monospace);
+      }
+
+      /* Buttons */
+      .btn {
+        font-weight: 500;
+        transition: all 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-primary {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--tw-accent-600);
+        --bs-btn-border-color: var(--tw-accent-600);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--tw-accent-700);
+        --bs-btn-hover-border-color: var(--tw-accent-700);
+        --bs-btn-active-color: #ffffff;
+        --bs-btn-active-bg: var(--tw-accent-800);
+        --bs-btn-active-border-color: var(--tw-accent-800);
+        --bs-btn-focus-shadow-rgb: var(--tw-accent-rgb);
+        box-shadow: 0 1px 2px oklch(20.8% 0.042 265.755 / 0.1);
+      }
+
+      .btn-outline-primary {
+        --bs-btn-color: var(--tw-accent-600);
+        --bs-btn-border-color: var(--tw-accent-300);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--tw-accent-600);
+        --bs-btn-hover-border-color: var(--tw-accent-600);
+        --bs-btn-active-color: #ffffff;
+        --bs-btn-active-bg: var(--tw-accent-700);
+        --bs-btn-active-border-color: var(--tw-accent-700);
+      }
+
+      .btn-secondary {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-slate-600);
+        --bs-btn-border-color: var(--color-slate-600);
+        --bs-btn-hover-bg: var(--color-slate-700);
+        --bs-btn-hover-border-color: var(--color-slate-700);
+        --bs-btn-active-bg: var(--color-slate-800);
+      }
+
+      .btn-outline-secondary {
+        --bs-btn-color: var(--color-slate-700);
+        --bs-btn-border-color: var(--color-slate-300);
+        --bs-btn-hover-color: var(--color-slate-900);
+        --bs-btn-hover-bg: var(--color-slate-100);
+        --bs-btn-hover-border-color: var(--color-slate-300);
+      }
+
+      .btn-success {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-emerald-600);
+        --bs-btn-border-color: var(--color-emerald-600);
+        --bs-btn-hover-bg: var(--color-emerald-700);
+        --bs-btn-hover-border-color: var(--color-emerald-700);
+        --bs-btn-active-bg: var(--color-emerald-800);
+      }
+
+      .btn-outline-success {
+        --bs-btn-color: var(--color-emerald-700);
+        --bs-btn-border-color: var(--color-emerald-300);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--color-emerald-600);
+        --bs-btn-hover-border-color: var(--color-emerald-600);
+      }
+
+      .btn-info {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-sky-500);
+        --bs-btn-border-color: var(--color-sky-500);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--color-sky-600);
+        --bs-btn-hover-border-color: var(--color-sky-600);
+      }
+
+      .btn-warning {
+        --bs-btn-color: var(--color-amber-950);
+        --bs-btn-bg: var(--color-amber-400);
+        --bs-btn-border-color: var(--color-amber-400);
+        --bs-btn-hover-color: var(--color-amber-950);
+        --bs-btn-hover-bg: var(--color-amber-500);
+        --bs-btn-hover-border-color: var(--color-amber-500);
+      }
+
+      .btn-danger {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-rose-600);
+        --bs-btn-border-color: var(--color-rose-600);
+        --bs-btn-hover-bg: var(--color-rose-700);
+        --bs-btn-hover-border-color: var(--color-rose-700);
+      }
+
+      .btn-outline-danger {
+        --bs-btn-color: var(--color-rose-600);
+        --bs-btn-border-color: var(--color-rose-300);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--color-rose-600);
+        --bs-btn-hover-border-color: var(--color-rose-600);
+      }
+
+      .btn-light {
+        --bs-btn-color: var(--color-slate-800);
+        --bs-btn-bg: var(--color-slate-100);
+        --bs-btn-border-color: var(--color-slate-200);
+        --bs-btn-hover-bg: var(--color-slate-200);
+        --bs-btn-hover-border-color: var(--color-slate-300);
+      }
+
+      .btn-dark {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-slate-800);
+        --bs-btn-border-color: var(--color-slate-800);
+        --bs-btn-hover-bg: var(--color-slate-900);
+        --bs-btn-hover-border-color: var(--color-slate-900);
+      }
+
+      /* Accordion */
+      .accordion {
+        --bs-accordion-bg: #ffffff;
+        --bs-accordion-border-color: var(--color-slate-200);
+        --bs-accordion-active-color: var(--tw-accent-800);
+        --bs-accordion-active-bg: var(--tw-accent-50);
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.18);
+      }
+
+      /* Dropdowns */
+      .dropdown-menu {
+        --bs-dropdown-border-color: var(--color-slate-200);
+        --bs-dropdown-link-hover-bg: var(--color-slate-100);
+        --bs-dropdown-link-active-bg: var(--tw-accent-600);
+        --bs-dropdown-link-active-color: #ffffff;
+        box-shadow: 0 12px 28px -8px oklch(20.8% 0.042 265.755 / 0.14);
+      }
+
+      /* List Group */
+      .list-group {
+        --bs-list-group-border-color: var(--color-slate-200);
+        --bs-list-group-active-bg: var(--tw-accent-600);
+        --bs-list-group-active-border-color: var(--tw-accent-600);
+        --bs-list-group-action-hover-bg: var(--color-slate-50);
+      }
+
+      /* Navs, Tabs & Pills */
+      .nav-pills .nav-link.active {
+        background-color: var(--tw-accent-600);
+        color: #ffffff;
+      }
+
+      .nav-underline .nav-link.active {
+        color: var(--tw-accent-700);
+        border-bottom-color: var(--tw-accent-600);
+      }
+
+      .nav-tabs .nav-link.active {
+        color: var(--tw-accent-700);
+        font-weight: 600;
+      }
+
+      /* Pagination */
+      .pagination {
+        --bs-pagination-color: var(--color-slate-700);
+        --bs-pagination-border-color: var(--color-slate-200);
+        --bs-pagination-hover-color: var(--tw-accent-700);
+        --bs-pagination-hover-bg: var(--tw-accent-50);
+        --bs-pagination-hover-border-color: var(--tw-accent-200);
+        --bs-pagination-active-bg: var(--tw-accent-600);
+        --bs-pagination-active-border-color: var(--tw-accent-600);
+        --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.2);
+      }
+
+      /* Form Focus & Checkboxes */
+      .form-control:focus,
+      .form-select:focus,
+      .form-check-input:focus {
+        border-color: var(--tw-accent-500);
+        box-shadow: 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.18);
+      }
+
+      .form-check-input:checked {
+        background-color: var(--tw-accent-600);
+        border-color: var(--tw-accent-600);
+      }
+
+      /* Popovers & Tooltips (Light Polish) */
+      .popover {
+        --bs-popover-border-color: var(--color-slate-200);
+        --bs-popover-header-bg: var(--color-slate-50);
+        --bs-popover-header-color: var(--color-slate-900);
+        --bs-popover-body-color: var(--color-slate-700);
+        box-shadow: 0 14px 30px -10px oklch(20.8% 0.042 265.755 / 0.16);
+      }
+
+      .tooltip {
+        --bs-tooltip-bg: var(--color-slate-800);
+        --bs-tooltip-color: #ffffff;
+        --bs-tooltip-opacity: 0.96;
+      }
+
+      /* ==========================================================================
+         5. LAYOUT & DIRECTORY STYLING (CLEAN LIGHT SHELL)
+         ========================================================================== */
+      .navbar-glass {
+        background-color: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--color-slate-200);
+      }
+
+      .hero-light-banner {
+        background: radial-gradient(
+            ellipse 65% 75% at 10% 0%,
+            color-mix(in oklch, var(--tw-accent-200) 45%, transparent),
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 55% 75% at 92% 15%,
+            color-mix(in oklch, var(--color-sky-200) 45%, transparent),
+            transparent 70%
+          ),
+          #ffffff;
+        border-bottom: 1px solid var(--color-slate-200);
+      }
+
+      .sidebar-sticky {
+        position: sticky;
+        top: 88px;
+        max-height: calc(100vh - 108px);
+        overflow-y: auto;
+      }
+
+      .sidebar-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.44rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.86rem;
+        font-weight: 500;
+        color: var(--color-slate-600);
+        text-decoration: none;
+        transition: background-color 0.14s ease, color 0.14s ease;
+      }
+
+      .sidebar-nav-link:hover {
+        background-color: var(--color-slate-100);
+        color: var(--color-slate-900);
+      }
+
+      .sidebar-nav-link.active {
+        background-color: var(--tw-accent-50);
+        color: var(--tw-accent-700);
+        font-weight: 600;
+      }
+
+      .component-card {
+        background-color: #ffffff;
+        border: 1px solid var(--color-slate-200);
+        border-radius: 1rem;
+        box-shadow: 0 1px 3px oklch(20.8% 0.042 265.755 / 0.04);
+        scroll-margin-top: 90px;
+      }
+
+      .component-card-header {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid var(--color-slate-100);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .component-card-body {
+        padding: 1.5rem;
+      }
+
+      .accent-dot {
+        width: 22px;
+        height: 22px;
+        border-radius: 9999px;
+        border: 2px solid #ffffff;
+        cursor: pointer;
+        padding: 0;
+        box-shadow: 0 0 0 1px var(--color-slate-300);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .accent-dot:hover {
+        transform: scale(1.14);
+      }
+
+      .accent-dot.active {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--tw-accent-500);
+        transform: scale(1.06);
+      }
+
+      /* Light Carousel Slide Surfaces */
+      .tw-carousel-slide {
+        min-height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.5rem 3.5rem;
+      }
+
+      .carousel-light-controls .carousel-control-prev-icon,
+      .carousel-light-controls .carousel-control-next-icon {
+        filter: invert(1) grayscale(100%) brightness(0.35);
+      }
+
+      .carousel-light-controls .carousel-indicators [data-bs-target] {
+        background-color: var(--color-slate-700);
+      }
+
+      /* Scrollspy Box */
+      .scrollspy-demo-pane {
+        position: relative;
+        height: 250px;
+        overflow-y: auto;
+        background-color: var(--color-slate-50);
+        border: 1px solid var(--color-slate-200);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ======================================================================
+         TOP STICKY NAVBAR (LIGHT THEME ONLY + LIVE TAILWIND ACCENT SWITCHER)
+         ====================================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-glass sticky-top py-2">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+          <span
+            class="d-inline-flex align-items-center justify-content-center rounded-3 text-white"
+            style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--tw-accent-600), var(--color-sky-500));"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
+              <path d="M12 12l8-4.5" />
+              <path d="M12 12v9" />
+              <path d="M12 12L4 7.5" />
+            </svg>
+          </span>
+          <span>Lumina UI</span>
+          <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle fw-medium" style="font-size: 0.7rem;">
+            24 Components · Light
+          </span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 ms-auto">
+          <!-- Accent Switcher -->
+          <div class="d-flex align-items-center gap-2 px-2 py-1 rounded-pill border bg-white">
+            <span class="small fw-medium text-body-secondary d-none d-md-inline ps-1">Accent:</span>
+            <button type="button" class="accent-dot active" data-accent="indigo" title="Indigo" style="background: var(--color-indigo-600);" aria-label="Indigo accent"></button>
+            <button type="button" class="accent-dot" data-accent="sky" title="Sky" style="background: var(--color-sky-600);" aria-label="Sky accent"></button>
+            <button type="button" class="accent-dot" data-accent="emerald" title="Emerald" style="background: var(--color-emerald-600);" aria-label="Emerald accent"></button>
+            <button type="button" class="accent-dot" data-accent="violet" title="Violet" style="background: var(--color-violet-600);" aria-label="Violet accent"></button>
+            <button type="button" class="accent-dot" data-accent="rose" title="Rose" style="background: var(--color-rose-600);" aria-label="Rose accent"></button>
+            <button type="button" class="accent-dot" data-accent="orange" title="Orange" style="background: var(--color-orange-600);" aria-label="Orange accent"></button>
+          </div>
+
+          <!-- Mobile Directory Offcanvas Trigger -->
+          <button
+            class="btn btn-outline-secondary btn-sm d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNavOffcanvas"
+            aria-controls="mobileNavOffcanvas"
+          >
+            Menu (24)
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======================================================================
+         LIGHT HERO HEADER
+         ====================================================================== -->
+    <header class="hero-light-banner py-4 py-md-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-2 px-3 py-2">
+              Bootstrap 5.3.9 × Tailwind CSS v4 OKLCH · Light Theme Only
+            </span>
+            <h1 class="display-6 fw-bold mb-2" style="letter-spacing: -0.025em;">
+              Complete Bootstrap Component Library
+            </h1>
+            <p class="text-body-secondary mb-0">
+              All 24 core Bootstrap 5.3 components styled exclusively in a clean Light Theme using Tailwind v4’s OKLCH palette (<code>slate</code>, <code>indigo</code>, <code>emerald</code>, <code>sky</code>, <code>amber</code>, and <code>rose</code>). Switch the primary accent above to repaint every component live.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="d-inline-flex flex-wrap gap-2 justify-content-lg-end">
+              <span class="badge bg-white text-body-secondary border px-3 py-2 font-mono">Primary: <strong id="heroAccentLabel" class="text-primary-emphasis">indigo-600</strong></span>
+              <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle px-3 py-2 font-mono">emerald-600</span>
+              <span class="badge bg-danger-subtle text-danger-emphasis border border-danger-subtle px-3 py-2 font-mono">rose-600</span>
+              <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2 font-mono">amber-500</span>
+              <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle px-3 py-2 font-mono">sky-500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================================
+         MAIN LAYOUT: STICKY SIDEBAR DIRECTORY + 24 COMPONENT CARDS
+         ====================================================================== -->
+    <main class="container py-4 py-md-5">
+      <div class="row g-4">
+        <!-- LEFT SIDEBAR DIRECTORY (Desktop) -->
+        <aside class="col-lg-3 d-none d-lg-block">
+          <div class="sidebar-sticky bg-white border rounded-4 p-3">
+            <div class="mb-3">
+              <label for="componentSearchInput" class="visually-hidden">Filter components</label>
+              <input
+                type="search"
+                id="componentSearchInput"
+                class="form-control form-control-sm"
+                placeholder="Filter 24 components..."
+              />
+            </div>
+            <div class="small fw-bold text-uppercase text-body-secondary px-2 mb-2" style="letter-spacing: 0.06em; font-size: 0.72rem;">
+              Components (A–Z)
+            </div>
+            <nav id="desktopComponentNav" class="d-flex flex-column gap-1">
+              <a class="sidebar-nav-link" href="#comp-accordion"><span>Accordion</span><span class="font-mono small opacity-50">01</span></a>
+              <a class="sidebar-nav-link" href="#comp-alerts"><span>Alerts</span><span class="font-mono small opacity-50">02</span></a>
+              <a class="sidebar-nav-link" href="#comp-badge"><span>Badge</span><span class="font-mono small opacity-50">03</span></a>
+              <a class="sidebar-nav-link" href="#comp-breadcrumb"><span>Breadcrumb</span><span class="font-mono small opacity-50">04</span></a>
+              <a class="sidebar-nav-link" href="#comp-buttons"><span>Buttons</span><span class="font-mono small opacity-50">05</span></a>
+              <a class="sidebar-nav-link" href="#comp-button-group"><span>Button group</span><span class="font-mono small opacity-50">06</span></a>
+              <a class="sidebar-nav-link" href="#comp-card"><span>Card</span><span class="font-mono small opacity-50">07</span></a>
+              <a class="sidebar-nav-link" href="#comp-carousel"><span>Carousel</span><span class="font-mono small opacity-50">08</span></a>
+              <a class="sidebar-nav-link" href="#comp-close-button"><span>Close button</span><span class="font-mono small opacity-50">09</span></a>
+              <a class="sidebar-nav-link" href="#comp-collapse"><span>Collapse</span><span class="font-mono small opacity-50">10</span></a>
+              <a class="sidebar-nav-link" href="#comp-dropdowns"><span>Dropdowns</span><span class="font-mono small opacity-50">11</span></a>
+              <a class="sidebar-nav-link" href="#comp-list-group"><span>List group</span><span class="font-mono small opacity-50">12</span></a>
+              <a class="sidebar-nav-link" href="#comp-modal"><span>Modal</span><span class="font-mono small opacity-50">13</span></a>
+              <a class="sidebar-nav-link" href="#comp-navbar"><span>Navbar</span><span class="font-mono small opacity-50">14</span></a>
+              <a class="sidebar-nav-link" href="#comp-navs-tabs"><span>Navs &amp; tabs</span><span class="font-mono small opacity-50">15</span></a>
+              <a class="sidebar-nav-link" href="#comp-offcanvas"><span>Offcanvas</span><span class="font-mono small opacity-50">16</span></a>
+              <a class="sidebar-nav-link" href="#comp-pagination"><span>Pagination</span><span class="font-mono small opacity-50">17</span></a>
+              <a class="sidebar-nav-link" href="#comp-placeholders"><span>Placeholders</span><span class="font-mono small opacity-50">18</span></a>
+              <a class="sidebar-nav-link" href="#comp-popovers"><span>Popovers</span><span class="font-mono small opacity-50">19</span></a>
+              <a class="sidebar-nav-link" href="#comp-progress"><span>Progress</span><span class="font-mono small opacity-50">20</span></a>
+              <a class="sidebar-nav-link" href="#comp-scrollspy"><span>Scrollspy</span><span class="font-mono small opacity-50">21</span></a>
+              <a class="sidebar-nav-link" href="#comp-spinners"><span>Spinners</span><span class="font-mono small opacity-50">22</span></a>
+              <a class="sidebar-nav-link" href="#comp-toasts"><span>Toasts</span><span class="font-mono small opacity-50">23</span></a>
+              <a class="sidebar-nav-link" href="#comp-tooltips"><span>Tooltips</span><span class="font-mono small opacity-50">24</span></a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- RIGHT CONTENT COLUMN (ALL 24 COMPONENTS) -->
+        <div class="col-lg-9 d-flex flex-column gap-4">
+
+          <!-- 01. ACCORDION -->
+          <section id="comp-accordion" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">01. Accordion</h2>
+                <p class="small text-body-secondary mb-0">Vertically collapsing panels with Tailwind subtle accent highlights.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.accordion</span>
+            </div>
+            <div class="component-card-body">
+              <div class="accordion" id="demoAccordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#accOne" aria-expanded="true" aria-controls="accOne">
+                      How are Tailwind OKLCH colors mapped to Bootstrap?
+                    </button>
+                  </h3>
+                  <div id="accOne" class="accordion-collapse collapse show" data-bs-parent="#demoAccordion">
+                    <div class="accordion-body small text-body-secondary">
+                      Bootstrap 5.3 CSS variables like <code>--bs-primary</code>, <code>--bs-success</code>, and <code>--bs-body-bg</code> are pointed directly to Tailwind v4 <code>oklch()</code> tokens defined in <code>:root</code>.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#accTwo" aria-expanded="false" aria-controls="accTwo">
+                      Does this require a Sass build step?
+                    </button>
+                  </h3>
+                  <div id="accTwo" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
+                    <div class="accordion-body small text-body-secondary">
+                      No compiler required. It works directly with the standard Bootstrap 5.3.9 CDN stylesheet and pure CSS custom properties.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#accThree" aria-expanded="false" aria-controls="accThree">
+                      Why use a dedicated Light Theme?
+                    </button>
+                  </h3>
+                  <div id="accThree" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
+                    <div class="accordion-body small text-body-secondary">
+                      Using Tailwind <code>slate-50</code> surfaces, crisp <code>#ffffff</code> cards, and <code>slate-200</code> hairline borders delivers clean visual clarity across data-dense applications.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 02. ALERTS -->
+          <section id="comp-alerts" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">02. Alerts</h2>
+                <p class="small text-body-secondary mb-0">Contextual feedback banners powered by Tailwind 50 / 200 / 800 ramps.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.alert</span>
+            </div>
+            <div class="component-card-body d-flex flex-column gap-2">
+              <div class="alert alert-primary mb-0 py-2 px-3 small" role="alert">
+                <strong>Primary:</strong> Active Tailwind accent alert with an <a href="#comp-alerts" class="alert-link">example link</a>.
+              </div>
+              <div class="alert alert-secondary mb-0 py-2 px-3 small" role="alert">
+                <strong>Secondary:</strong> Neutral Slate notification for general system updates.
+              </div>
+              <div class="alert alert-success mb-0 py-2 px-3 small" role="alert">
+                <strong>Success (Emerald):</strong> Your workspace tokens have been synchronized.
+              </div>
+              <div class="alert alert-info mb-0 py-2 px-3 small" role="alert">
+                <strong>Info (Sky):</strong> A new minor update to Bootstrap 5.3.9 is active.
+              </div>
+              <div class="alert alert-warning mb-0 py-2 px-3 small" role="alert">
+                <strong>Warning (Amber):</strong> You have used 85% of your monthly bandwidth quota.
+              </div>
+              <div class="alert alert-danger alert-dismissible fade show mb-0 py-2 px-3 small" role="alert">
+                <strong>Danger (Rose):</strong> API token expired. Rotate your key to restore webhooks.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="padding: 0.72rem;"></button>
+              </div>
+            </div>
+          </section>
+
+          <!-- 03. BADGE -->
+          <section id="comp-badge" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">03. Badge</h2>
+                <p class="small text-body-secondary mb-0">Solid, pill, subtle-bordered, and positioned notification counter badges.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.badge</span>
+            </div>
+            <div class="component-card-body">
+              <div class="small fw-semibold text-body-secondary mb-2">Solid &amp; Pill Badges</div>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge text-bg-primary">Primary</span>
+                <span class="badge text-bg-secondary">Secondary</span>
+                <span class="badge text-bg-success">Emerald</span>
+                <span class="badge text-bg-info text-white">Sky Info</span>
+                <span class="badge text-bg-warning">Amber</span>
+                <span class="badge text-bg-danger">Rose</span>
+                <span class="badge rounded-pill text-bg-light border">Slate Light</span>
+                <span class="badge rounded-pill text-bg-dark">Slate 800</span>
+              </div>
+
+              <div class="small fw-semibold text-body-secondary mb-2">Subtle Tailwind Tints &amp; Positioned Counters</div>
+              <div class="d-flex flex-wrap align-items-center gap-2">
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle px-3 py-2">Primary Subtle</span>
+                <span class="badge rounded-pill bg-success-subtle text-success-emphasis border border-success-subtle px-3 py-2">Verified</span>
+                <span class="badge rounded-pill bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2">Pending</span>
+                <span class="badge rounded-pill bg-danger-subtle text-danger-emphasis border border-danger-subtle px-3 py-2">Deprecated</span>
+
+                <button type="button" class="btn btn-outline-secondary btn-sm position-relative ms-2">
+                  Inbox
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    9+
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- 04. BREADCRUMB -->
+          <section id="comp-breadcrumb" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">04. Breadcrumb</h2>
+                <p class="small text-body-secondary mb-0">Hierarchical navigation trails with default and custom chevron dividers.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.breadcrumb</span>
+            </div>
+            <div class="component-card-body">
+              <nav aria-label="Default breadcrumb" class="p-3 rounded-3 bg-body-tertiary border mb-3">
+                <ol class="breadcrumb mb-0 small">
+                  <li class="breadcrumb-item"><a href="#comp-breadcrumb">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#comp-breadcrumb">Components</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Breadcrumb</li>
+                </ol>
+              </nav>
+
+              <nav style="--bs-breadcrumb-divider: '›';" aria-label="Chevron breadcrumb" class="p-3 rounded-3 bg-body-tertiary border">
+                <ol class="breadcrumb mb-0 small">
+                  <li class="breadcrumb-item"><a href="#comp-breadcrumb">Workspace</a></li>
+                  <li class="breadcrumb-item"><a href="#comp-breadcrumb">Design Tokens</a></li>
+                  <li class="breadcrumb-item"><a href="#comp-breadcrumb">Tailwind v4</a></li>
+                  <li class="breadcrumb-item active fw-semibold" aria-current="page">OKLCH Light</li>
+                </ol>
+              </nav>
+            </div>
+          </section>
+
+          <!-- 05. BUTTONS -->
+          <section id="comp-buttons" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">05. Buttons</h2>
+                <p class="small text-body-secondary mb-0">Solid, outline, sizes, pill shapes, and disabled button states.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.btn</span>
+            </div>
+            <div class="component-card-body">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Slate 800</button>
+                <button type="button" class="btn btn-link">Link</button>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button type="button" class="btn btn-outline-primary">Outline Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Outline Slate</button>
+                <button type="button" class="btn btn-outline-success">Outline Emerald</button>
+                <button type="button" class="btn btn-outline-danger">Outline Rose</button>
+                <button type="button" class="btn btn-primary rounded-pill px-4">Pill Button</button>
+                <button type="button" class="btn btn-primary" disabled>Disabled</button>
+              </div>
+
+              <div class="d-flex flex-wrap align-items-center gap-2">
+                <button type="button" class="btn btn-primary btn-sm">Small</button>
+                <button type="button" class="btn btn-primary">Default</button>
+                <button type="button" class="btn btn-primary btn-lg">Large</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- 06. BUTTON GROUP -->
+          <section id="comp-button-group" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">06. Button group</h2>
+                <p class="small text-body-secondary mb-0">Grouped actions, segmented radio toggles, and nested dropdown button groups.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.btn-group</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap align-items-center gap-3">
+              <!-- Basic Group -->
+              <div class="btn-group" role="group" aria-label="Basic button group">
+                <button type="button" class="btn btn-primary">Day</button>
+                <button type="button" class="btn btn-primary">Week</button>
+                <button type="button" class="btn btn-primary">Month</button>
+              </div>
+
+              <!-- Radio Toggle Segmented Group -->
+              <div class="btn-group" role="group" aria-label="View toggle">
+                <input type="radio" class="btn-check" name="btnGroupView" id="viewGrid" autocomplete="off" checked />
+                <label class="btn btn-outline-primary" for="viewGrid">Grid</label>
+
+                <input type="radio" class="btn-check" name="btnGroupView" id="viewList" autocomplete="off" />
+                <label class="btn btn-outline-primary" for="viewList">List</label>
+
+                <input type="radio" class="btn-check" name="btnGroupView" id="viewKanban" autocomplete="off" />
+                <label class="btn btn-outline-primary" for="viewKanban">Board</label>
+              </div>
+
+              <!-- Nested Dropdown in Button Group -->
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <button type="button" class="btn btn-outline-secondary">Export</button>
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Format
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#comp-button-group">CSS Variables</a></li>
+                    <li><a class="dropdown-item" href="#comp-button-group">JSON Design Tokens</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 07. CARD -->
+          <section id="comp-card" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">07. Card</h2>
+                <p class="small text-body-secondary mb-0">Flexible light containers with headers, footers, media headers, and subtle tints.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.card</span>
+            </div>
+            <div class="component-card-body">
+              <div class="row g-3">
+                <!-- Media Card -->
+                <div class="col-md-6">
+                  <div class="card h-100 rounded-4 overflow-hidden">
+                    <div
+                      class="p-4 d-flex align-items-center justify-content-center"
+                      style="height: 130px; background: linear-gradient(135deg, var(--tw-accent-100), var(--color-sky-100));"
+                    >
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color: var(--tw-accent-700);">
+                        <rect x="3" y="3" width="18" height="18" rx="4" />
+                        <path d="M3 9h18" />
+                        <path d="M9 21V9" />
+                      </svg>
+                    </div>
+                    <div class="card-body">
+                      <span class="badge bg-primary-subtle text-primary-emphasis mb-2">Featured</span>
+                      <h3 class="card-title h6 fw-bold">Tailwind OKLCH Card</h3>
+                      <p class="card-text small text-body-secondary">
+                        Crisp light surface with balanced spacing, rounded geometry, and subtle border definition.
+                      </p>
+                      <a href="#comp-card" class="btn btn-primary btn-sm">Inspect Card</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Header & Footer Card -->
+                <div class="col-md-6">
+                  <div class="card h-100 rounded-4">
+                    <div class="card-header bg-body-tertiary d-flex justify-content-between align-items-center py-2 px-3">
+                      <span class="small fw-semibold">Release Summary</span>
+                      <span class="badge bg-success-subtle text-success-emphasis">v4.1</span>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title h6 fw-bold">Perceptual Color Consistency</h3>
+                      <p class="card-text small text-body-secondary">
+                        All Bootstrap semantic tokens map cleanly to Tailwind’s 11-step scales without visual harshness.
+                      </p>
+                      <ul class="list-unstyled small text-body-secondary mb-0">
+                        <li>• High-contrast Slate text hierarchy</li>
+                        <li>• Zero dark-mode flashes or overrides</li>
+                      </ul>
+                    </div>
+                    <div class="card-footer bg-white d-flex justify-content-between align-items-center py-2 px-3 small text-body-secondary">
+                      <span>Updated just now</span>
+                      <a href="#comp-card" class="text-decoration-none fw-medium">Changelog →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 08. CAROUSEL -->
+          <section id="comp-carousel" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">08. Carousel</h2>
+                <p class="small text-body-secondary mb-0">Interactive slideshow with indicators, next/prev controls, and light pastel slides.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.carousel</span>
+            </div>
+            <div class="component-card-body">
+              <div id="lightCarousel" class="carousel slide carousel-light-controls rounded-4 overflow-hidden border" data-bs-ride="carousel">
+                <div class="carousel-indicators mb-2">
+                  <button type="button" data-bs-target="#lightCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#lightCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#lightCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="tw-carousel-slide text-center" style="background: linear-gradient(135deg, var(--tw-accent-50), var(--tw-accent-100));">
+                      <div>
+                        <span class="badge rounded-pill bg-white text-primary-emphasis border mb-2 px-3 py-1">Slide 1 of 3</span>
+                        <h3 class="h4 fw-bold mb-2">Primary Tailwind Accent</h3>
+                        <p class="small text-body-secondary mb-0 mx-auto" style="max-width: 440px;">
+                          This slide dynamically reacts when you switch the active accent color in the top navbar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="tw-carousel-slide text-center" style="background: linear-gradient(135deg, var(--color-emerald-50), var(--color-sky-100));">
+                      <div>
+                        <span class="badge rounded-pill bg-white text-success-emphasis border mb-2 px-3 py-1">Slide 2 of 3</span>
+                        <h3 class="h4 fw-bold mb-2">Emerald &amp; Sky Harmony</h3>
+                        <p class="small text-body-secondary mb-0 mx-auto" style="max-width: 440px;">
+                          Soft pastel light gradients ensure text remains sharp and effortless to read.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="tw-carousel-slide text-center" style="background: linear-gradient(135deg, var(--color-amber-50), var(--color-rose-100));">
+                      <div>
+                        <span class="badge rounded-pill bg-white text-danger-emphasis border mb-2 px-3 py-1">Slide 3 of 3</span>
+                        <h3 class="h4 fw-bold mb-2">Warm Amber &amp; Rose</h3>
+                        <p class="small text-body-secondary mb-0 mx-auto" style="max-width: 440px;">
+                          Swipe on touchscreens or click the left/right arrows to navigate smoothly.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#lightCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#lightCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- 09. CLOSE BUTTON -->
+          <section id="comp-close-button" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">09. Close button</h2>
+                <p class="small text-body-secondary mb-0">Generic accessible dismiss controls in active, disabled, and interactive chip states.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.btn-close</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap align-items-center gap-4">
+              <div class="d-flex align-items-center gap-2 p-2 px-3 rounded-3 border bg-body-tertiary">
+                <span class="small fw-medium">Default:</span>
+                <button type="button" class="btn-close" aria-label="Close" id="demoCloseBtn"></button>
+              </div>
+              <div class="d-flex align-items-center gap-2 p-2 px-3 rounded-3 border bg-body-tertiary">
+                <span class="small fw-medium text-body-secondary">Disabled:</span>
+                <button type="button" class="btn-close" disabled aria-label="Close"></button>
+              </div>
+              <div id="dismissibleTagDemo" class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle small fw-medium">
+                <span>Click × to dismiss me</span>
+                <button type="button" class="btn-close" style="width: 0.55rem; height: 0.55rem;" aria-label="Dismiss chip" id="dismissChipBtn"></button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-secondary d-none" id="restoreChipBtn">Restore Chip</button>
+            </div>
+          </section>
+
+          <!-- 10. COLLAPSE -->
+          <section id="comp-collapse" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">10. Collapse</h2>
+                <p class="small text-body-secondary mb-0">Toggle visibility of vertical and horizontal content blocks smoothly.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.collapse</span>
+            </div>
+            <div class="component-card-body">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVerticalDemo" aria-expanded="true" aria-controls="collapseVerticalDemo">
+                  Toggle Vertical Panel
+                </button>
+                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHorizontalDemo" aria-expanded="false" aria-controls="collapseHorizontalDemo">
+                  Toggle Horizontal Panel
+                </button>
+              </div>
+
+              <div class="collapse show mb-3" id="collapseVerticalDemo">
+                <div class="p-3 rounded-3 border bg-body-tertiary small text-body-secondary">
+                  This vertical collapse panel uses Bootstrap’s JavaScript transition with Tailwind’s light <code>slate-50</code> background and <code>slate-200</code> border.
+                </div>
+              </div>
+
+              <div style="min-height: 76px;">
+                <div class="collapse collapse-horizontal" id="collapseHorizontalDemo">
+                  <div class="p-3 rounded-3 border bg-primary-subtle text-primary-emphasis small" style="width: 300px;">
+                    Horizontal collapse smoothly animates width instead of height!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 11. DROPDOWNS -->
+          <section id="comp-dropdowns" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">11. Dropdowns</h2>
+                <p class="small text-body-secondary mb-0">Contextual menus, split buttons, headers, dividers, and dropup directions.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.dropdown</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap gap-3">
+              <!-- Single Dropdown -->
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Workspace Actions
+                </button>
+                <ul class="dropdown-menu">
+                  <li><h6 class="dropdown-header">Manage</h6></li>
+                  <li><a class="dropdown-item active" href="#comp-dropdowns">Overview</a></li>
+                  <li><a class="dropdown-item" href="#comp-dropdowns">Design Tokens</a></li>
+                  <li><a class="dropdown-item disabled" aria-disabled="true">Audit Logs (Pro)</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item text-danger" href="#comp-dropdowns">Archive Project</a></li>
+                </ul>
+              </div>
+
+              <!-- Split Button Dropdown -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-success">Deploy</button>
+                <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#comp-dropdowns">Deploy to Staging</a></li>
+                  <li><a class="dropdown-item" href="#comp-dropdowns">Deploy to Production</a></li>
+                </ul>
+              </div>
+
+              <!-- Dropup -->
+              <div class="btn-group dropup">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropup Menu
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#comp-dropdowns">Light Theme (Active)</a></li>
+                  <li><a class="dropdown-item" href="#comp-dropdowns">Compact Density</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 12. LIST GROUP -->
+          <section id="comp-list-group" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">12. List group</h2>
+                <p class="small text-body-secondary mb-0">Actionable lists with active states, counters, and interactive checkboxes.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.list-group</span>
+            </div>
+            <div class="component-card-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="list-group">
+                    <a href="#comp-list-group" class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center" aria-current="true">
+                      <span>Design System Tokens</span>
+                      <span class="badge bg-white text-primary-emphasis rounded-pill">24</span>
+                    </a>
+                    <a href="#comp-list-group" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                      <span>Typography Scale</span>
+                      <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">12</span>
+                    </a>
+                    <a href="#comp-list-group" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                      <span>Accessibility Checks</span>
+                      <span class="badge bg-success-subtle text-success-emphasis rounded-pill">Pass</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action disabled" aria-disabled="true">Legacy Theme (Disabled)</a>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="lgCheck1" checked />
+                      <label class="form-check-label stretched-link small" for="lgCheck1">Map Tailwind OKLCH palette</label>
+                    </li>
+                    <li class="list-group-item">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="lgCheck2" checked />
+                      <label class="form-check-label stretched-link small" for="lgCheck2">Enforce Light Theme surfaces</label>
+                    </li>
+                    <li class="list-group-item">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="lgCheck3" />
+                      <label class="form-check-label stretched-link small" for="lgCheck3">Export production CSS bundle</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 13. MODAL -->
+          <section id="comp-modal" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">13. Modal</h2>
+                <p class="small text-body-secondary mb-0">Accessible dialog overlays for forms, confirmations, and long scrollable content.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.modal</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#standardDemoModal">
+                Launch Centered Modal
+              </button>
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#scrollableDemoModal">
+                Launch Scrollable Modal
+              </button>
+              <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticDemoModal">
+                Static Backdrop Confirm
+              </button>
+            </div>
+          </section>
+
+          <!-- 14. NAVBAR -->
+          <section id="comp-navbar" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">14. Navbar</h2>
+                <p class="small text-body-secondary mb-0">Responsive light navigation headers with brand, links, and inline search.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.navbar</span>
+            </div>
+            <div class="component-card-body d-flex flex-column gap-3">
+              <!-- Embedded Light Navbar -->
+              <nav class="navbar navbar-expand-md bg-white border rounded-3 px-3">
+                <a class="navbar-brand fw-bold small" href="#comp-navbar">Acme Light</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#embeddedNav1" aria-controls="embeddedNav1" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="embeddedNav1">
+                  <ul class="navbar-nav me-auto mb-2 mb-md-0 small">
+                    <li class="nav-item"><a class="nav-link active fw-semibold" aria-current="page" href="#comp-navbar">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comp-navbar">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comp-navbar">Billing</a></li>
+                  </ul>
+                  <form class="d-flex gap-2" role="search" onsubmit="return false;">
+                    <input class="form-control form-control-sm" type="search" placeholder="Search..." aria-label="Search" />
+                    <button class="btn btn-outline-primary btn-sm" type="submit">Go</button>
+                  </form>
+                </div>
+              </nav>
+
+              <!-- Embedded Subtle Accent Navbar -->
+              <nav class="navbar navbar-expand-md bg-primary-subtle border border-primary-subtle rounded-3 px-3">
+                <a class="navbar-brand fw-bold small text-primary-emphasis" href="#comp-navbar">Subtle Accent Bar</a>
+                <div class="ms-auto d-flex align-items-center gap-3 small">
+                  <a class="nav-link text-primary-emphasis fw-medium" href="#comp-navbar">Docs</a>
+                  <a class="nav-link text-primary-emphasis fw-medium" href="#comp-navbar">API</a>
+                  <button type="button" class="btn btn-primary btn-sm">Sign In</button>
+                </div>
+              </nav>
+            </div>
+          </section>
+
+          <!-- 15. NAVS & TABS -->
+          <section id="comp-navs-tabs" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">15. Navs &amp; tabs</h2>
+                <p class="small text-body-secondary mb-0">Interactive underline nav, standard tabs, and pill navigation switchers.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.nav-tabs / .nav-pills</span>
+            </div>
+            <div class="component-card-body">
+              <!-- Underline Nav -->
+              <ul class="nav nav-underline mb-4 small">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#comp-navs-tabs">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#comp-navs-tabs">Tokens</a></li>
+                <li class="nav-item"><a class="nav-link" href="#comp-navs-tabs">Usage</a></li>
+                <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Archive</a></li>
+              </ul>
+
+              <!-- Interactive Tabs -->
+              <ul class="nav nav-tabs mb-3 small" id="demoTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="tab-home-btn" data-bs-toggle="tab" data-bs-target="#tab-home-pane" type="button" role="tab">Overview</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab-tokens-btn" data-bs-toggle="tab" data-bs-target="#tab-tokens-pane" type="button" role="tab">Color Tokens</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab-settings-btn" data-bs-toggle="tab" data-bs-target="#tab-settings-pane" type="button" role="tab">Preferences</button>
+                </li>
+              </ul>
+              <div class="tab-content p-3 rounded-3 bg-body-tertiary border mb-4 small text-body-secondary">
+                <div class="tab-pane fade show active" id="tab-home-pane" role="tabpanel">
+                  Active <strong>Overview</strong> tab pane rendered with Bootstrap’s tab plugin and Tailwind Slate styling.
+                </div>
+                <div class="tab-pane fade" id="tab-tokens-pane" role="tabpanel">
+                  Active <strong>Color Tokens</strong> pane showing primary <code>--tw-accent-600</code> and subtle <code>--tw-accent-50</code>.
+                </div>
+                <div class="tab-pane fade" id="tab-settings-pane" role="tabpanel">
+                  Active <strong>Preferences</strong> pane locked cleanly to Light Mode.
+                </div>
+              </div>
+
+              <!-- Pills -->
+              <ul class="nav nav-pills small gap-1">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#comp-navs-tabs">All</a></li>
+                <li class="nav-item"><a class="nav-link" href="#comp-navs-tabs">Active</a></li>
+                <li class="nav-item"><a class="nav-link" href="#comp-navs-tabs">Completed</a></li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 16. OFFCANVAS -->
+          <section id="comp-offcanvas" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">16. Offcanvas</h2>
+                <p class="small text-body-secondary mb-0">Slide-out light sidebars from the left, right, or bottom edge of the viewport.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.offcanvas</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap gap-2">
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeftDemo" aria-controls="offcanvasLeftDemo">
+                Open Left Offcanvas
+              </button>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightDemo" aria-controls="offcanvasRightDemo">
+                Open Right Inspector
+              </button>
+              <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottomDemo" aria-controls="offcanvasBottomDemo">
+                Open Bottom Drawer
+              </button>
+            </div>
+          </section>
+
+          <!-- 17. PAGINATION -->
+          <section id="comp-pagination" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">17. Pagination</h2>
+                <p class="small text-body-secondary mb-0">Interactive multi-page navigation with active Tailwind highlight and disabled controls.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.pagination</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap align-items-center justify-content-between gap-3">
+              <nav aria-label="Interactive pagination">
+                <ul class="pagination mb-0" id="demoPagination">
+                  <li class="page-item disabled" id="pagePrev"><a class="page-link" href="#comp-pagination" data-page="prev">Previous</a></li>
+                  <li class="page-item active"><a class="page-link" href="#comp-pagination" data-page="1">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#comp-pagination" data-page="2">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#comp-pagination" data-page="3">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#comp-pagination" data-page="4">4</a></li>
+                  <li class="page-item" id="pageNext"><a class="page-link" href="#comp-pagination" data-page="next">Next</a></li>
+                </ul>
+              </nav>
+              <span id="paginationStatus" class="small text-body-secondary font-mono">Showing page 1 of 4</span>
+            </div>
+          </section>
+
+          <!-- 18. PLACEHOLDERS -->
+          <section id="comp-placeholders" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">18. Placeholders</h2>
+                <p class="small text-body-secondary mb-0">Skeleton loading states with glow/wave animations and semantic Tailwind colors.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.placeholder</span>
+            </div>
+            <div class="component-card-body">
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <div class="card rounded-3 p-3" aria-hidden="true">
+                    <div class="placeholder-glow mb-2">
+                      <span class="placeholder col-12 rounded-2" style="height: 70px;"></span>
+                    </div>
+                    <h4 class="card-title placeholder-glow mb-2">
+                      <span class="placeholder col-6 rounded"></span>
+                    </h4>
+                    <p class="card-text placeholder-glow small mb-3">
+                      <span class="placeholder col-7 rounded"></span>
+                      <span class="placeholder col-4 rounded"></span>
+                      <span class="placeholder col-8 rounded"></span>
+                    </p>
+                    <a class="btn btn-primary btn-sm disabled placeholder col-5" aria-disabled="true"></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 rounded-3 border bg-body-tertiary h-100 d-flex flex-column justify-content-center gap-2">
+                    <div class="small fw-semibold text-body-secondary mb-1">Tailwind Colored Wave Placeholders</div>
+                    <div class="placeholder-wave"><span class="placeholder col-12 bg-primary rounded"></span></div>
+                    <div class="placeholder-wave"><span class="placeholder col-10 bg-success rounded"></span></div>
+                    <div class="placeholder-wave"><span class="placeholder col-9 bg-info rounded"></span></div>
+                    <div class="placeholder-wave"><span class="placeholder col-8 bg-warning rounded"></span></div>
+                    <div class="placeholder-wave"><span class="placeholder col-7 bg-danger rounded"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 19. POPOVERS -->
+          <section id="comp-popovers" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">19. Popovers</h2>
+                <p class="small text-body-secondary mb-0">Click any button below to toggle directional and focus-dismissible popovers.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">data-bs-toggle="popover"</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap gap-2">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-bs-placement="top"
+                data-bs-title="Top Popover"
+                data-bs-content="Styled with crisp Slate borders and soft elevation in Light Mode."
+              >
+                Popover on Top
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-bs-placement="right"
+                data-bs-title="Right Popover"
+                data-bs-content="Powered by Popper.js inside Bootstrap 5.3.9."
+              >
+                Popover on Right
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-bs-placement="bottom"
+                data-bs-title="Bottom Popover"
+                data-bs-content="Clean typography with Slate-700 body text."
+              >
+                Popover on Bottom
+              </button>
+              <a
+                tabindex="0"
+                class="btn btn-primary"
+                role="button"
+                data-bs-toggle="popover"
+                data-bs-trigger="focus"
+                data-bs-title="Dismissible Popover"
+                data-bs-content="Click anywhere outside this button to automatically dismiss."
+              >
+                Dismissible on Focus
+              </a>
+            </div>
+          </section>
+
+          <!-- 20. PROGRESS -->
+          <section id="comp-progress" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">20. Progress</h2>
+                <p class="small text-body-secondary mb-0">Standard, labeled, striped animated, and multi-segment stacked progress bars.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.progress</span>
+            </div>
+            <div class="component-card-body d-flex flex-column gap-3">
+              <div>
+                <div class="d-flex justify-content-between small mb-1">
+                  <span class="fw-medium">Primary Accent Progress</span>
+                  <span class="font-mono text-primary-emphasis">72%</span>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Primary progress" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                  <div class="progress-bar bg-primary rounded-pill" style="width: 72%"></div>
+                </div>
+              </div>
+
+              <div class="progress" role="progressbar" aria-label="Success labeled" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 18px;">
+                <div class="progress-bar bg-success fw-semibold" style="width: 85%">Emerald 85%</div>
+              </div>
+
+              <div class="progress" role="progressbar" aria-label="Animated striped info" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 12px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 60%"></div>
+              </div>
+
+              <div>
+                <div class="small fw-medium mb-1">Stacked Tailwind Semantic Bars</div>
+                <div class="progress-stacked" style="height: 12px;">
+                  <div class="progress" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                    <div class="progress-bar bg-primary"></div>
+                  </div>
+                  <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                    <div class="progress-bar bg-success"></div>
+                  </div>
+                  <div class="progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                    <div class="progress-bar bg-warning"></div>
+                  </div>
+                  <div class="progress" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%">
+                    <div class="progress-bar bg-danger"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 21. SCROLLSPY -->
+          <section id="comp-scrollspy" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">21. Scrollspy</h2>
+                <p class="small text-body-secondary mb-0">Scroll inside the light box on the right to watch the linked navigation update automatically.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">data-bs-spy="scroll"</span>
+            </div>
+            <div class="component-card-body">
+              <div class="row g-3">
+                <div class="col-sm-4">
+                  <div id="scrollspyListDemo" class="list-group small">
+                    <a class="list-group-item list-group-item-action" href="#spy-section-1">1. Introduction</a>
+                    <a class="list-group-item list-group-item-action" href="#spy-section-2">2. OKLCH Scale</a>
+                    <a class="list-group-item list-group-item-action" href="#spy-section-3">3. Light Surfaces</a>
+                    <a class="list-group-item list-group-item-action" href="#spy-section-4">4. Deployment</a>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div
+                    data-bs-spy="scroll"
+                    data-bs-target="#scrollspyListDemo"
+                    data-bs-smooth-scroll="true"
+                    class="scrollspy-demo-pane small text-body-secondary"
+                    tabindex="0"
+                  >
+                    <h4 id="spy-section-1" class="h6 fw-bold text-body">1. Introduction</h4>
+                    <p class="mb-4">
+                      Scrollspy automatically updates Bootstrap navigation links based on scroll position inside this container. Try scrolling down smoothly to see each item activate in your active Tailwind accent color.
+                    </p>
+                    <h4 id="spy-section-2" class="h6 fw-bold text-body">2. OKLCH Scale</h4>
+                    <p class="mb-4">
+                      Tailwind CSS v4 uses perceptually uniform OKLCH colors so step 600 across Indigo, Emerald, Rose, and Sky maintains balanced visual weight on light backgrounds.
+                    </p>
+                    <h4 id="spy-section-3" class="h6 fw-bold text-body">3. Light Surfaces</h4>
+                    <p class="mb-4">
+                      Combining pure white elevated cards over Slate-50 page canvases provides subtle depth without needing heavy drop shadows.
+                    </p>
+                    <h4 id="spy-section-4" class="h6 fw-bold text-body">4. Deployment</h4>
+                    <p class="mb-2">
+                      Because all overrides are pure CSS custom properties, your bundle stays tiny and requires zero build pipeline changes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 22. SPINNERS -->
+          <section id="comp-spinners" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">22. Spinners</h2>
+                <p class="small text-body-secondary mb-0">Border and growing loading indicators in Tailwind semantic colors and buttons.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.spinner-border / .spinner-grow</span>
+            </div>
+            <div class="component-card-body">
+              <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-border text-success" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-border text-info" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-border text-warning" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-border text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+
+                <div class="vr mx-1"></div>
+
+                <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-grow text-success" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-grow text-info" role="status"><span class="visually-hidden">Loading...</span></div>
+                <div class="spinner-grow text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary btn-sm" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm me-1" aria-hidden="true"></span>
+                  <span role="status">Saving changes...</span>
+                </button>
+                <button class="btn btn-outline-success btn-sm" type="button" disabled>
+                  <span class="spinner-grow spinner-grow-sm me-1" aria-hidden="true"></span>
+                  <span role="status">Syncing tokens...</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- 23. TOASTS -->
+          <section id="comp-toasts" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">23. Toasts</h2>
+                <p class="small text-body-secondary mb-0">Lightweight, non-blocking notifications with static previews and live corner triggers.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">.toast</span>
+            </div>
+            <div class="component-card-body">
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <button type="button" class="btn btn-primary btn-sm" data-toast-trigger="primary">Trigger Primary Toast</button>
+                <button type="button" class="btn btn-success btn-sm" data-toast-trigger="success">Trigger Emerald Toast</button>
+                <button type="button" class="btn btn-danger btn-sm" data-toast-trigger="danger">Trigger Rose Toast</button>
+              </div>
+
+              <!-- Static Inline Preview Toast -->
+              <div class="toast show border shadow-sm w-100" style="max-width: 380px;" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header bg-white">
+                  <span class="rounded-circle me-2 d-inline-block" style="width: 10px; height: 10px; background: var(--bs-primary);"></span>
+                  <strong class="me-auto small">Lumina System</strong>
+                  <small class="text-body-secondary">Just now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body small text-body-secondary">
+                  Static preview of a Light Theme Bootstrap Toast styled with Tailwind OKLCH tokens.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 24. TOOLTIPS -->
+          <section id="comp-tooltips" class="component-card">
+            <div class="component-card-header">
+              <div>
+                <h2 class="h5 fw-bold mb-0">24. Tooltips</h2>
+                <p class="small text-body-secondary mb-0">Hover or focus any button below to inspect directional and HTML tooltips.</p>
+              </div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis font-mono">data-bs-toggle="tooltip"</span>
+            </div>
+            <div class="component-card-body d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top (Slate 800)">
+                Tooltip Top
+              </button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+                Tooltip Right
+              </button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+                Tooltip Bottom
+              </button>
+              <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+                Tooltip Left
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-title="<em>Formatted</em> <u>HTML</u> <b>Tooltip</b>"
+              >
+                Tooltip with HTML
+              </button>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ======================================================================
+         LIGHT FOOTER
+         ====================================================================== -->
+    <footer class="py-4 mt-4 bg-white border-top">
+      <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 small text-body-secondary">
+        <span><strong>Lumina UI</strong> — All 24 Bootstrap 5.3.9 Components in Light Theme</span>
+        <span class="font-mono">Tailwind CSS v4 OKLCH Palette</span>
+      </div>
+    </footer>
+
+    <!-- ======================================================================
+         MODALS (For Section 13)
+         ====================================================================== -->
+    <!-- Standard Centered Modal -->
+    <div class="modal fade" id="standardDemoModal" tabindex="-1" aria-labelledby="standardDemoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border">
+          <div class="modal-header">
+            <h3 class="modal-title h5 fw-bold" id="standardDemoModalLabel">Light Theme Centered Modal</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body small text-body-secondary">
+            This modal uses pure white surfaces, Tailwind <code>slate-200</code> borders, and your active OKLCH primary accent button.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal" id="modalSaveToastBtn">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable Modal -->
+    <div class="modal fade" id="scrollableDemoModal" tabindex="-1" aria-labelledby="scrollableDemoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content rounded-4 border">
+          <div class="modal-header">
+            <h3 class="modal-title h5 fw-bold" id="scrollableDemoModalLabel">Scrollable Design Specs</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body small text-body-secondary">
+            <p><strong>1. Perceptual Uniformity:</strong> OKLCH color spaces preserve consistent lightness across hues, ensuring Emerald, Sky, Amber, and Rose buttons look visually balanced side-by-side.</p>
+            <p><strong>2. Light Theme Surfaces:</strong> Pairing Slate-50 backgrounds with pure white cards eliminates harsh visual contrast while keeping hierarchy obvious.</p>
+            <p><strong>3. Focus Accessibility:</strong> Interactive controls display soft translucent rings computed directly from the active Tailwind accent color.</p>
+            <p><strong>4. Zero Build Overhead:</strong> Every Bootstrap 5.3.9 component works straight from CDN without compiling custom Sass stylesheets.</p>
+            <p class="mb-0"><strong>5. Complete Coverage:</strong> All 24 standard Bootstrap components—including Popper-driven Dropdowns, Tooltips, and Popovers—are initialized and ready to use.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Done Reading</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Static Backdrop Modal -->
+    <div class="modal fade" id="staticDemoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticDemoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border">
+          <div class="modal-header">
+            <h3 class="modal-title h5 fw-bold text-danger-emphasis" id="staticDemoModalLabel">Confirm Destructive Action</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body small text-body-secondary">
+            Clicking outside this modal will not dismiss it. Use the Rose Danger button or Cancel button to proceed.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Keep Item</button>
+            <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" id="modalDeleteToastBtn">Delete Permanently</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         OFFCANVAS DRAWERS (For Section 16 & Mobile Menu)
+         ====================================================================== -->
+    <!-- Mobile Component Directory Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNavOffcanvas" aria-labelledby="mobileNavOffcanvasLabel">
+      <div class="offcanvas-header border-bottom">
+        <h3 class="offcanvas-title h6 fw-bold" id="mobileNavOffcanvasLabel">All 24 Components</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" id="mobileComponentNavContainer">
+        <!-- Populated automatically from desktop directory -->
+      </div>
+    </div>
+
+    <!-- Demo Left Offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeftDemo" aria-labelledby="offcanvasLeftDemoLabel">
+      <div class="offcanvas-header border-bottom">
+        <h3 class="offcanvas-title h6 fw-bold" id="offcanvasLeftDemoLabel">Left Light Offcanvas</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body small text-body-secondary">
+        <p>Ideal for navigation drawers, workspace switchers, or mobile menus in Light Theme.</p>
+        <div class="list-group">
+          <a href="#comp-offcanvas" class="list-group-item list-group-item-action active" data-bs-dismiss="offcanvas">Dashboard</a>
+          <a href="#comp-offcanvas" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">Color Scales</a>
+          <a href="#comp-offcanvas" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">Team Settings</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Right Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightDemo" aria-labelledby="offcanvasRightDemoLabel">
+      <div class="offcanvas-header border-bottom">
+        <h3 class="offcanvas-title h6 fw-bold" id="offcanvasRightDemoLabel">Token Inspector Drawer</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body small text-body-secondary">
+        <p>Right-side offcanvas drawers work great for detail views, filter panels, and shopping carts.</p>
+        <div class="p-3 rounded-3 border bg-body-tertiary font-mono">
+          <div>--bs-body-bg: slate-50</div>
+          <div>--bs-success: emerald-600</div>
+          <div>--bs-danger: rose-600</div>
+          <div>--bs-warning: amber-500</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Bottom Offcanvas -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottomDemo" aria-labelledby="offcanvasBottomDemoLabel" style="height: 220px;">
+      <div class="offcanvas-header border-bottom">
+        <h3 class="offcanvas-title h6 fw-bold" id="offcanvasBottomDemoLabel">Bottom Action Sheet</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body small text-body-secondary d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <span>Bottom offcanvas sheets are ideal for mobile-friendly quick actions and confirmations.</span>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="offcanvas">Got it</button>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         LIVE TOAST CONTAINER (Bottom-Right)
+         ====================================================================== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="liveToastStack" style="z-index: 1090;"></div>
+
+    <!-- Bootstrap 5.3.9 JS Bundle (Includes Popper for Dropdowns, Popovers & Tooltips) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const htmlEl = document.documentElement;
+        const liveToastStack = document.getElementById('liveToastStack');
+
+        /**
+         * Creates and displays a live Light-Theme Bootstrap Toast.
+         * @param {string} title - Header title.
+         * @param {string} message - Body message.
+         * @param {'primary'|'success'|'danger'} variant - Tailwind semantic indicator color.
+         */
+        function spawnToast(title, message, variant = 'primary') {
+          if (!liveToastStack) return;
+          const dotColorMap = {
+            primary: 'var(--bs-primary)',
+            success: 'var(--bs-success)',
+            danger: 'var(--bs-danger)'
+          };
+
+          const toastEl = document.createElement('div');
+          toastEl.className = 'toast border shadow-lg rounded-3 bg-white';
+          toastEl.setAttribute('role', 'status');
+          toastEl.setAttribute('aria-live', 'polite');
+          toastEl.setAttribute('aria-atomic', 'true');
+          toastEl.innerHTML = `
+            <div class="toast-header bg-white">
+              <span class="rounded-circle me-2 d-inline-block" style="width: 10px; height: 10px; background: ${dotColorMap[variant] || dotColorMap.primary};"></span>
+              <strong class="me-auto small">${title}</strong>
+              <small class="text-body-secondary">Now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body small text-body-secondary">${message}</div>
+          `;
+
+          liveToastStack.appendChild(toastEl);
+          const bsToast = new bootstrap.Toast(toastEl, { delay: 3000 });
+          toastEl.addEventListener('hidden.bs.toast', () => toastEl.remove());
+          bsToast.show();
+        }
+
+        /* --------------------------------------------------------------------
+           1. INITIALIZE ALL BOOTSTRAP TOOLTIPS & POPOVERS
+           -------------------------------------------------------------------- */
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
+          new bootstrap.Tooltip(el);
+        });
+
+        document.querySelectorAll('[data-bs-toggle="popover"]').forEach((el) => {
+          new bootstrap.Popover(el);
+        });
+
+        /* --------------------------------------------------------------------
+           2. LIVE TAILWIND PRIMARY ACCENT SWITCHER (LIGHT THEME ONLY)
+           -------------------------------------------------------------------- */
+        const accentButtons = document.querySelectorAll('.accent-dot');
+        const heroAccentLabel = document.getElementById('heroAccentLabel');
+
+        accentButtons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const accent = btn.getAttribute('data-accent');
+            htmlEl.setAttribute('data-tw-accent', accent);
+            accentButtons.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (heroAccentLabel) heroAccentLabel.textContent = `${accent}-600`;
+            spawnToast('Tailwind Accent Updated', `Primary color switched to ${accent}-600 in Light Theme.`, 'primary');
+          });
+        });
+
+        /* --------------------------------------------------------------------
+           3. SIDEBAR DIRECTORY SEARCH & MOBILE OFFCANVAS SYNC
+           -------------------------------------------------------------------- */
+        const desktopNav = document.getElementById('desktopComponentNav');
+        const mobileNavContainer = document.getElementById('mobileComponentNavContainer');
+        const searchInput = document.getElementById('componentSearchInput');
+
+        if (desktopNav && mobileNavContainer) {
+          const cloneNav = desktopNav.cloneNode(true);
+          cloneNav.removeAttribute('id');
+          cloneNav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+              const ocEl = document.getElementById('mobileNavOffcanvas');
+              const ocInstance = ocEl ? bootstrap.Offcanvas.getInstance(ocEl) : null;
+              if (ocInstance) ocInstance.hide();
+            });
+          });
+          mobileNavContainer.appendChild(cloneNav);
+        }
+
+        if (searchInput && desktopNav) {
+          searchInput.addEventListener('input', () => {
+            const q = searchInput.value.trim().toLowerCase();
+            desktopNav.querySelectorAll('a').forEach((link) => {
+              const matches = link.textContent.toLowerCase().includes(q);
+              link.classList.toggle('d-none', !matches);
+            });
+          });
+        }
+
+        // Highlight active sidebar link on scroll
+        const sections = document.querySelectorAll('.component-card');
+        const navLinks = desktopNav ? Array.from(desktopNav.querySelectorAll('a')) : [];
+        if ('IntersectionObserver' in window && sections.length && navLinks.length) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const id = `#${entry.target.id}`;
+                  navLinks.forEach((link) => {
+                    link.classList.toggle('active', link.getAttribute('href') === id);
+                  });
+                }
+              });
+            },
+            { rootMargin: '-15% 0px -70% 0px', threshold: 0 }
+          );
+          sections.forEach((sec) => observer.observe(sec));
+        }
+
+        /* --------------------------------------------------------------------
+           4. INTERACTIVE COMPONENT DEMOS (Close Chip, Pagination, Toasts, Modals)
+           -------------------------------------------------------------------- */
+        const dismissChipBtn = document.getElementById('dismissChipBtn');
+        const dismissibleTagDemo = document.getElementById('dismissibleTagDemo');
+        const restoreChipBtn = document.getElementById('restoreChipBtn');
+        const demoCloseBtn = document.getElementById('demoCloseBtn');
+
+        if (demoCloseBtn) {
+          demoCloseBtn.addEventListener('click', () => {
+            spawnToast('Close Button Clicked', 'Generic .btn-close control triggered.', 'primary');
+          });
+        }
+
+        if (dismissChipBtn && dismissibleTagDemo && restoreChipBtn) {
+          dismissChipBtn.addEventListener('click', () => {
+            dismissibleTagDemo.classList.add('d-none');
+            restoreChipBtn.classList.remove('d-none');
+          });
+          restoreChipBtn.addEventListener('click', () => {
+            dismissibleTagDemo.classList.remove('d-none');
+            restoreChipBtn.classList.add('d-none');
+          });
+        }
+
+        // Interactive Pagination
+        const demoPagination = document.getElementById('demoPagination');
+        const paginationStatus = document.getElementById('paginationStatus');
+        let currentPage = 1;
+        const totalPages = 4;
+
+        function updatePaginationUI() {
+          if (!demoPagination) return;
+          demoPagination.querySelectorAll('[data-page]').forEach((link) => {
+            const val = link.getAttribute('data-page');
+            const li = link.closest('.page-item');
+            if (!li) return;
+            if (val === 'prev') {
+              li.classList.toggle('disabled', currentPage === 1);
+            } else if (val === 'next') {
+              li.classList.toggle('disabled', currentPage === totalPages);
+            } else {
+              li.classList.toggle('active', Number(val) === currentPage);
+            }
+          });
+          if (paginationStatus) {
+            paginationStatus.textContent = `Showing page ${currentPage} of ${totalPages}`;
+          }
+        }
+
+        if (demoPagination) {
+          demoPagination.addEventListener('click', (e) => {
+            const link = e.target.closest('[data-page]');
+            if (!link) return;
+            e.preventDefault();
+            const val = link.getAttribute('data-page');
+            if (val === 'prev' && currentPage > 1) currentPage -= 1;
+            else if (val === 'next' && currentPage < totalPages) currentPage += 1;
+            else if (!Number.isNaN(Number(val))) currentPage = Number(val);
+            updatePaginationUI();
+          });
+        }
+
+        // Toast Trigger Buttons
+        document.querySelectorAll('[data-toast-trigger]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const variant = btn.getAttribute('data-toast-trigger');
+            if (variant === 'success') {
+              spawnToast('Emerald Success', 'All Tailwind OKLCH tokens synced cleanly.', 'success');
+            } else if (variant === 'danger') {
+              spawnToast('Rose Alert', 'Simulated error toast using Tailwind rose-600.', 'danger');
+            } else {
+              spawnToast('Primary Update', 'Live Bootstrap toast using your active accent.', 'primary');
+            }
+          });
+        });
+
+        // Modal Confirmation Toast Feedback
+        const modalSaveToastBtn = document.getElementById('modalSaveToastBtn');
+        const modalDeleteToastBtn = document.getElementById('modalDeleteToastBtn');
+        if (modalSaveToastBtn) {
+          modalSaveToastBtn.addEventListener('click', () => {
+            spawnToast('Saved', 'Modal changes applied successfully.', 'success');
+          });
+        }
+        if (modalDeleteToastBtn) {
+          modalDeleteToastBtn.addEventListener('click', () => {
+            spawnToast('Deleted', 'Destructive action confirmed in Light Theme.', 'danger');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
