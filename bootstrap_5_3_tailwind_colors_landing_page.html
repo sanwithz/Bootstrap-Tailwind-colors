@@ -1,0 +1,2699 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" data-tw-accent="indigo">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumina — Bootstrap 5.3 Powered by Tailwind OKLCH Colors</title>
+
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.9 CSS (exact CDN provided) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* ==========================================================================
+         1. TAILWIND CSS v4 COMPLETE OKLCH COLOR PALETTE
+         Exposed as CSS custom properties in the --color-* namespace
+         ========================================================================== */
+      :root {
+        /* Red */
+        --color-red-50: oklch(97.1% 0.013 17.38);
+        --color-red-100: oklch(93.6% 0.032 17.717);
+        --color-red-200: oklch(88.5% 0.062 18.334);
+        --color-red-300: oklch(80.8% 0.114 19.571);
+        --color-red-400: oklch(70.4% 0.191 22.216);
+        --color-red-500: oklch(63.7% 0.237 25.331);
+        --color-red-600: oklch(57.7% 0.245 27.325);
+        --color-red-700: oklch(50.5% 0.213 27.518);
+        --color-red-800: oklch(44.4% 0.177 26.899);
+        --color-red-900: oklch(39.6% 0.141 25.723);
+        --color-red-950: oklch(25.8% 0.092 26.042);
+
+        /* Orange */
+        --color-orange-50: oklch(98% 0.016 73.684);
+        --color-orange-100: oklch(95.4% 0.038 75.164);
+        --color-orange-200: oklch(90.1% 0.076 70.697);
+        --color-orange-300: oklch(83.7% 0.128 66.29);
+        --color-orange-400: oklch(75% 0.183 55.934);
+        --color-orange-500: oklch(70.5% 0.213 47.604);
+        --color-orange-600: oklch(64.6% 0.222 41.116);
+        --color-orange-700: oklch(55.3% 0.195 38.402);
+        --color-orange-800: oklch(47% 0.157 37.304);
+        --color-orange-900: oklch(40.8% 0.123 38.172);
+        --color-orange-950: oklch(26.6% 0.079 36.259);
+
+        /* Amber */
+        --color-amber-50: oklch(98.7% 0.022 95.277);
+        --color-amber-100: oklch(96.2% 0.059 95.617);
+        --color-amber-200: oklch(92.4% 0.12 95.746);
+        --color-amber-300: oklch(87.9% 0.169 91.605);
+        --color-amber-400: oklch(82.8% 0.189 84.429);
+        --color-amber-500: oklch(76.9% 0.188 70.08);
+        --color-amber-600: oklch(66.6% 0.179 58.318);
+        --color-amber-700: oklch(55.5% 0.163 48.998);
+        --color-amber-800: oklch(47.3% 0.137 46.201);
+        --color-amber-900: oklch(41.4% 0.112 45.904);
+        --color-amber-950: oklch(27.9% 0.077 45.635);
+
+        /* Yellow */
+        --color-yellow-50: oklch(98.7% 0.026 102.212);
+        --color-yellow-100: oklch(97.3% 0.071 103.193);
+        --color-yellow-200: oklch(94.5% 0.129 101.54);
+        --color-yellow-300: oklch(90.5% 0.182 98.111);
+        --color-yellow-400: oklch(85.2% 0.199 91.936);
+        --color-yellow-500: oklch(79.5% 0.184 86.047);
+        --color-yellow-600: oklch(68.1% 0.162 75.834);
+        --color-yellow-700: oklch(55.4% 0.135 66.442);
+        --color-yellow-800: oklch(47.6% 0.114 61.907);
+        --color-yellow-900: oklch(42.1% 0.095 57.708);
+        --color-yellow-950: oklch(28.6% 0.066 53.813);
+
+        /* Lime */
+        --color-lime-50: oklch(98.6% 0.031 120.757);
+        --color-lime-100: oklch(96.7% 0.067 122.328);
+        --color-lime-200: oklch(93.8% 0.127 124.321);
+        --color-lime-300: oklch(89.7% 0.196 126.665);
+        --color-lime-400: oklch(84.1% 0.238 128.85);
+        --color-lime-500: oklch(76.8% 0.233 130.85);
+        --color-lime-600: oklch(64.8% 0.2 131.684);
+        --color-lime-700: oklch(53.2% 0.157 131.589);
+        --color-lime-800: oklch(45.3% 0.124 130.933);
+        --color-lime-900: oklch(40.5% 0.101 131.063);
+        --color-lime-950: oklch(27.4% 0.072 132.109);
+
+        /* Green */
+        --color-green-50: oklch(98.2% 0.018 155.826);
+        --color-green-100: oklch(96.2% 0.044 156.743);
+        --color-green-200: oklch(92.5% 0.084 155.995);
+        --color-green-300: oklch(87.1% 0.15 154.449);
+        --color-green-400: oklch(79.2% 0.209 151.711);
+        --color-green-500: oklch(72.3% 0.219 149.579);
+        --color-green-600: oklch(62.7% 0.194 149.214);
+        --color-green-700: oklch(52.7% 0.154 150.069);
+        --color-green-800: oklch(44.8% 0.119 151.328);
+        --color-green-900: oklch(39.3% 0.095 152.535);
+        --color-green-950: oklch(26.6% 0.065 152.934);
+
+        /* Emerald */
+        --color-emerald-50: oklch(97.9% 0.021 166.113);
+        --color-emerald-100: oklch(95% 0.052 163.051);
+        --color-emerald-200: oklch(90.5% 0.093 164.15);
+        --color-emerald-300: oklch(84.5% 0.143 164.978);
+        --color-emerald-400: oklch(76.5% 0.177 163.223);
+        --color-emerald-500: oklch(69.6% 0.17 162.48);
+        --color-emerald-600: oklch(59.6% 0.145 163.225);
+        --color-emerald-700: oklch(50.8% 0.118 165.612);
+        --color-emerald-800: oklch(43.2% 0.095 166.913);
+        --color-emerald-900: oklch(37.8% 0.077 168.94);
+        --color-emerald-950: oklch(26.2% 0.051 172.552);
+
+        /* Teal */
+        --color-teal-50: oklch(98.4% 0.014 180.72);
+        --color-teal-100: oklch(95.3% 0.051 180.801);
+        --color-teal-200: oklch(91% 0.096 180.426);
+        --color-teal-300: oklch(85.5% 0.138 181.071);
+        --color-teal-400: oklch(77.7% 0.152 181.912);
+        --color-teal-500: oklch(70.4% 0.14 182.503);
+        --color-teal-600: oklch(60% 0.118 184.704);
+        --color-teal-700: oklch(51.1% 0.096 186.391);
+        --color-teal-800: oklch(43.7% 0.078 188.216);
+        --color-teal-900: oklch(38.6% 0.063 188.416);
+        --color-teal-950: oklch(27.7% 0.046 192.524);
+
+        /* Cyan */
+        --color-cyan-50: oklch(98.4% 0.019 200.873);
+        --color-cyan-100: oklch(95.6% 0.045 203.388);
+        --color-cyan-200: oklch(91.7% 0.08 205.041);
+        --color-cyan-300: oklch(86.5% 0.127 207.078);
+        --color-cyan-400: oklch(78.9% 0.154 211.53);
+        --color-cyan-500: oklch(71.5% 0.143 215.221);
+        --color-cyan-600: oklch(60.9% 0.126 221.723);
+        --color-cyan-700: oklch(52% 0.105 223.128);
+        --color-cyan-800: oklch(45% 0.085 224.283);
+        --color-cyan-900: oklch(39.8% 0.07 227.392);
+        --color-cyan-950: oklch(30.2% 0.056 229.695);
+
+        /* Sky */
+        --color-sky-50: oklch(97.7% 0.013 236.62);
+        --color-sky-100: oklch(95.1% 0.026 236.824);
+        --color-sky-200: oklch(90.1% 0.058 230.902);
+        --color-sky-300: oklch(82.8% 0.111 230.318);
+        --color-sky-400: oklch(74.6% 0.16 232.661);
+        --color-sky-500: oklch(68.5% 0.169 237.323);
+        --color-sky-600: oklch(58.8% 0.158 241.966);
+        --color-sky-700: oklch(50% 0.134 242.749);
+        --color-sky-800: oklch(44.3% 0.11 240.79);
+        --color-sky-900: oklch(39.1% 0.09 240.876);
+        --color-sky-950: oklch(29.3% 0.066 243.157);
+
+        /* Blue */
+        --color-blue-50: oklch(97% 0.014 254.604);
+        --color-blue-100: oklch(93.2% 0.032 255.585);
+        --color-blue-200: oklch(88.2% 0.059 254.128);
+        --color-blue-300: oklch(80.9% 0.105 251.813);
+        --color-blue-400: oklch(70.7% 0.165 254.624);
+        --color-blue-500: oklch(62.3% 0.214 259.815);
+        --color-blue-600: oklch(54.6% 0.245 262.881);
+        --color-blue-700: oklch(48.8% 0.243 264.376);
+        --color-blue-800: oklch(42.4% 0.199 265.638);
+        --color-blue-900: oklch(37.9% 0.146 265.522);
+        --color-blue-950: oklch(28.2% 0.091 267.935);
+
+        /* Indigo */
+        --color-indigo-50: oklch(96.2% 0.018 272.314);
+        --color-indigo-100: oklch(93% 0.034 272.788);
+        --color-indigo-200: oklch(87% 0.065 274.039);
+        --color-indigo-300: oklch(78.5% 0.115 274.713);
+        --color-indigo-400: oklch(67.3% 0.182 276.935);
+        --color-indigo-500: oklch(58.5% 0.233 277.117);
+        --color-indigo-600: oklch(51.1% 0.262 276.966);
+        --color-indigo-700: oklch(45.7% 0.24 277.023);
+        --color-indigo-800: oklch(39.8% 0.195 277.366);
+        --color-indigo-900: oklch(35.9% 0.144 278.697);
+        --color-indigo-950: oklch(25.7% 0.09 281.288);
+
+        /* Violet */
+        --color-violet-50: oklch(96.9% 0.016 293.756);
+        --color-violet-100: oklch(94.3% 0.029 294.588);
+        --color-violet-200: oklch(89.4% 0.057 293.283);
+        --color-violet-300: oklch(81.1% 0.111 293.571);
+        --color-violet-400: oklch(70.2% 0.183 293.541);
+        --color-violet-500: oklch(60.6% 0.25 292.717);
+        --color-violet-600: oklch(54.1% 0.281 293.009);
+        --color-violet-700: oklch(49.1% 0.27 292.581);
+        --color-violet-800: oklch(43.2% 0.232 292.759);
+        --color-violet-900: oklch(38% 0.189 293.745);
+        --color-violet-950: oklch(28.3% 0.141 291.089);
+
+        /* Fuchsia */
+        --color-fuchsia-50: oklch(97.7% 0.017 320.058);
+        --color-fuchsia-100: oklch(95.2% 0.037 318.852);
+        --color-fuchsia-200: oklch(90.3% 0.076 319.62);
+        --color-fuchsia-300: oklch(83.3% 0.145 321.434);
+        --color-fuchsia-400: oklch(74% 0.238 322.16);
+        --color-fuchsia-500: oklch(66.7% 0.295 322.15);
+        --color-fuchsia-600: oklch(59.1% 0.293 322.896);
+        --color-fuchsia-700: oklch(51.8% 0.253 323.949);
+        --color-fuchsia-800: oklch(45.2% 0.211 324.591);
+        --color-fuchsia-900: oklch(40.1% 0.17 325.612);
+        --color-fuchsia-950: oklch(29.3% 0.136 325.661);
+
+        /* Purple */
+        --color-purple-50: oklch(97.7% 0.014 308.299);
+        --color-purple-100: oklch(94.6% 0.033 307.174);
+        --color-purple-200: oklch(90.2% 0.063 306.703);
+        --color-purple-300: oklch(82.7% 0.119 306.383);
+        --color-purple-400: oklch(71.4% 0.203 305.504);
+        --color-purple-500: oklch(62.7% 0.265 303.9);
+        --color-purple-600: oklch(55.8% 0.288 302.321);
+        --color-purple-700: oklch(49.6% 0.265 301.924);
+        --color-purple-800: oklch(43.8% 0.218 303.724);
+        --color-purple-900: oklch(38.1% 0.176 304.987);
+        --color-purple-950: oklch(29.1% 0.149 302.717);
+
+        /* Pink */
+        --color-pink-50: oklch(97.1% 0.014 343.198);
+        --color-pink-100: oklch(94.8% 0.028 342.258);
+        --color-pink-200: oklch(89.9% 0.061 343.231);
+        --color-pink-300: oklch(82.3% 0.12 346.018);
+        --color-pink-400: oklch(71.8% 0.202 349.761);
+        --color-pink-500: oklch(65.6% 0.241 354.308);
+        --color-pink-600: oklch(59.2% 0.249 0.584);
+        --color-pink-700: oklch(52.5% 0.223 3.958);
+        --color-pink-800: oklch(45.9% 0.187 3.815);
+        --color-pink-900: oklch(40.8% 0.153 2.432);
+        --color-pink-950: oklch(28.4% 0.109 3.907);
+
+        /* Rose */
+        --color-rose-50: oklch(96.9% 0.015 12.422);
+        --color-rose-100: oklch(94.1% 0.03 12.58);
+        --color-rose-200: oklch(89.2% 0.058 10.001);
+        --color-rose-300: oklch(81% 0.117 11.638);
+        --color-rose-400: oklch(71.2% 0.194 13.428);
+        --color-rose-500: oklch(64.5% 0.246 16.439);
+        --color-rose-600: oklch(58.6% 0.253 17.585);
+        --color-rose-700: oklch(51.4% 0.222 16.935);
+        --color-rose-800: oklch(45.5% 0.188 13.697);
+        --color-rose-900: oklch(41% 0.159 10.272);
+        --color-rose-950: oklch(27.1% 0.105 12.094);
+
+        /* Slate (Neutral UI Foundation) */
+        --color-slate-50: oklch(98.4% 0.003 247.858);
+        --color-slate-100: oklch(96.8% 0.007 247.896);
+        --color-slate-200: oklch(92.9% 0.013 255.508);
+        --color-slate-300: oklch(86.9% 0.022 252.894);
+        --color-slate-400: oklch(70.4% 0.04 256.788);
+        --color-slate-500: oklch(55.4% 0.046 257.417);
+        --color-slate-600: oklch(44.6% 0.043 257.281);
+        --color-slate-700: oklch(37.2% 0.044 257.287);
+        --color-slate-800: oklch(27.9% 0.041 260.031);
+        --color-slate-900: oklch(20.8% 0.042 265.755);
+        --color-slate-950: oklch(12.9% 0.042 264.695);
+
+        /* Zinc & Neutral */
+        --color-zinc-900: oklch(21% 0.006 285.885);
+        --color-zinc-950: oklch(14.1% 0.005 285.823);
+
+        /* Mauve (Tailwind v4 Extended Neutral) */
+        --color-mauve-50: oklch(98.5% 0 0);
+        --color-mauve-100: oklch(96% 0.003 325.6);
+        --color-mauve-200: oklch(92.2% 0.005 325.62);
+        --color-mauve-300: oklch(86.5% 0.012 325.68);
+        --color-mauve-400: oklch(71.1% 0.019 323.02);
+        --color-mauve-500: oklch(54.2% 0.034 322.5);
+        --color-mauve-600: oklch(43.5% 0.029 321.78);
+        --color-mauve-700: oklch(36.4% 0.029 323.89);
+        --color-mauve-800: oklch(26.3% 0.024 320.12);
+        --color-mauve-900: oklch(21.2% 0.019 322.12);
+        --color-mauve-950: oklch(14.5% 0.008 326);
+
+        /* Olive (Tailwind v4 Extended Neutral) */
+        --color-olive-50: oklch(98.8% 0.003 106.5);
+        --color-olive-100: oklch(96.6% 0.005 106.5);
+        --color-olive-200: oklch(93% 0.007 106.5);
+        --color-olive-300: oklch(88% 0.011 106.6);
+        --color-olive-400: oklch(73.7% 0.021 106.9);
+        --color-olive-500: oklch(58% 0.031 107.3);
+        --color-olive-600: oklch(46.6% 0.025 107.3);
+        --color-olive-700: oklch(39.4% 0.023 107.4);
+        --color-olive-800: oklch(28.6% 0.016 107.4);
+        --color-olive-900: oklch(22.8% 0.013 107.4);
+        --color-olive-950: oklch(15.3% 0.006 107.1);
+
+        /* Mist (Tailwind v4 Extended Neutral) */
+        --color-mist-50: oklch(98.7% 0.002 197.1);
+        --color-mist-100: oklch(96.3% 0.002 197.1);
+        --color-mist-200: oklch(92.5% 0.005 214.3);
+        --color-mist-300: oklch(87.2% 0.007 219.6);
+        --color-mist-400: oklch(72.3% 0.014 214.4);
+        --color-mist-500: oklch(56% 0.021 213.5);
+        --color-mist-600: oklch(45% 0.017 213.2);
+        --color-mist-700: oklch(37.8% 0.015 216);
+        --color-mist-800: oklch(27.5% 0.011 216.9);
+        --color-mist-900: oklch(21.8% 0.008 223.9);
+        --color-mist-950: oklch(14.8% 0.004 228.8);
+
+        /* Taupe (Tailwind v4 Extended Neutral) */
+        --color-taupe-50: oklch(98.6% 0.002 67.8);
+        --color-taupe-100: oklch(96% 0.002 17.2);
+        --color-taupe-200: oklch(92.2% 0.005 34.3);
+        --color-taupe-300: oklch(86.8% 0.007 39.5);
+        --color-taupe-400: oklch(71.4% 0.014 41.2);
+        --color-taupe-500: oklch(54.7% 0.021 43.1);
+        --color-taupe-600: oklch(43.8% 0.017 39.3);
+        --color-taupe-700: oklch(36.7% 0.016 35.7);
+        --color-taupe-800: oklch(26.8% 0.011 36.5);
+        --color-taupe-900: oklch(21.4% 0.009 43.1);
+        --color-taupe-950: oklch(14.7% 0.004 49.3);
+
+        --color-white: #ffffff;
+        --color-black: #000000;
+
+        /* ==========================================================================
+           2. ACTIVE ACCENT TOKENS (Dynamic Primary Palette — Default: Indigo)
+           Allows switching Bootstrap's Primary color across Tailwind scales!
+           ========================================================================== */
+        --tw-accent-50: var(--color-indigo-50);
+        --tw-accent-100: var(--color-indigo-100);
+        --tw-accent-200: var(--color-indigo-200);
+        --tw-accent-300: var(--color-indigo-300);
+        --tw-accent-400: var(--color-indigo-400);
+        --tw-accent-500: var(--color-indigo-500);
+        --tw-accent-600: var(--color-indigo-600);
+        --tw-accent-700: var(--color-indigo-700);
+        --tw-accent-800: var(--color-indigo-800);
+        --tw-accent-900: var(--color-indigo-900);
+        --tw-accent-950: var(--color-indigo-950);
+        --tw-accent-rgb: 79, 70, 229;
+
+        /* ==========================================================================
+           3. BOOTSTRAP 5.3 SEMANTIC COLOR OVERRIDES (LIGHT MODE)
+           Replaces default Bootstrap colors with Tailwind OKLCH tokens
+           ========================================================================== */
+        --bs-font-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+        --bs-font-monospace: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+        /* Core Semantic Colors */
+        --bs-primary: var(--tw-accent-600);
+        --bs-primary-rgb: var(--tw-accent-rgb);
+        --bs-secondary: var(--color-slate-600);
+        --bs-secondary-rgb: 71, 85, 105;
+        --bs-success: var(--color-emerald-600);
+        --bs-success-rgb: 5, 150, 105;
+        --bs-info: var(--color-sky-500);
+        --bs-info-rgb: 14, 165, 233;
+        --bs-warning: var(--color-amber-500);
+        --bs-warning-rgb: 245, 158, 11;
+        --bs-danger: var(--color-rose-600);
+        --bs-danger-rgb: 225, 29, 72;
+        --bs-light: var(--color-slate-100);
+        --bs-light-rgb: 241, 245, 249;
+        --bs-dark: var(--color-slate-900);
+        --bs-dark-rgb: 15, 23, 42;
+
+        /* Subtle Backgrounds, Borders & Text Emphasis (Light Mode) */
+        --bs-primary-text-emphasis: var(--tw-accent-800);
+        --bs-primary-bg-subtle: var(--tw-accent-50);
+        --bs-primary-border-subtle: var(--tw-accent-200);
+
+        --bs-secondary-text-emphasis: var(--color-slate-800);
+        --bs-secondary-bg-subtle: var(--color-slate-100);
+        --bs-secondary-border-subtle: var(--color-slate-200);
+
+        --bs-success-text-emphasis: var(--color-emerald-800);
+        --bs-success-bg-subtle: var(--color-emerald-50);
+        --bs-success-border-subtle: var(--color-emerald-200);
+
+        --bs-info-text-emphasis: var(--color-sky-800);
+        --bs-info-bg-subtle: var(--color-sky-50);
+        --bs-info-border-subtle: var(--color-sky-200);
+
+        --bs-warning-text-emphasis: var(--color-amber-800);
+        --bs-warning-bg-subtle: var(--color-amber-50);
+        --bs-warning-border-subtle: var(--color-amber-200);
+
+        --bs-danger-text-emphasis: var(--color-rose-800);
+        --bs-danger-bg-subtle: var(--color-rose-50);
+        --bs-danger-border-subtle: var(--color-rose-200);
+
+        /* Surfaces, Typography & Borders (Mapped to Tailwind Slate) */
+        --bs-body-color: var(--color-slate-900);
+        --bs-body-color-rgb: 15, 23, 42;
+        --bs-body-bg: var(--color-white);
+        --bs-body-bg-rgb: 255, 255, 255;
+        --bs-emphasis-color: var(--color-slate-950);
+        --bs-emphasis-color-rgb: 2, 6, 23;
+        --bs-secondary-color: var(--color-slate-600);
+        --bs-secondary-color-rgb: 71, 85, 105;
+        --bs-secondary-bg: var(--color-slate-100);
+        --bs-secondary-bg-rgb: 241, 245, 249;
+        --bs-tertiary-color: var(--color-slate-500);
+        --bs-tertiary-bg: var(--color-slate-50);
+        --bs-tertiary-bg-rgb: 248, 250, 252;
+
+        --bs-border-color: var(--color-slate-200);
+        --bs-border-color-translucent: oklch(20.8% 0.042 265.755 / 0.1);
+        --bs-link-color: var(--tw-accent-600);
+        --bs-link-hover-color: var(--tw-accent-700);
+        --bs-focus-ring-color: rgba(var(--tw-accent-rgb), 0.25);
+
+        /* Bootstrap Validation Colors mapped to Tailwind Emerald & Rose */
+        --bs-form-valid-color: var(--color-emerald-600);
+        --bs-form-valid-border-color: var(--color-emerald-500);
+        --bs-form-invalid-color: var(--color-rose-600);
+        --bs-form-invalid-border-color: var(--color-rose-500);
+
+        /* Rounded modern geometry */
+        --bs-border-radius: 0.625rem;
+        --bs-border-radius-lg: 0.875rem;
+        --bs-border-radius-xl: 1.25rem;
+      }
+
+      /* ==========================================================================
+         4. LIVE ACCENT PALETTE VARIATIONS (Switchable via data-tw-accent)
+         ========================================================================== */
+      [data-tw-accent='sky'] {
+        --tw-accent-50: var(--color-sky-50);
+        --tw-accent-100: var(--color-sky-100);
+        --tw-accent-200: var(--color-sky-200);
+        --tw-accent-300: var(--color-sky-300);
+        --tw-accent-400: var(--color-sky-400);
+        --tw-accent-500: var(--color-sky-500);
+        --tw-accent-600: var(--color-sky-600);
+        --tw-accent-700: var(--color-sky-700);
+        --tw-accent-800: var(--color-sky-800);
+        --tw-accent-900: var(--color-sky-900);
+        --tw-accent-950: var(--color-sky-950);
+        --tw-accent-rgb: 2, 132, 199;
+      }
+
+      [data-tw-accent='emerald'] {
+        --tw-accent-50: var(--color-emerald-50);
+        --tw-accent-100: var(--color-emerald-100);
+        --tw-accent-200: var(--color-emerald-200);
+        --tw-accent-300: var(--color-emerald-300);
+        --tw-accent-400: var(--color-emerald-400);
+        --tw-accent-500: var(--color-emerald-500);
+        --tw-accent-600: var(--color-emerald-600);
+        --tw-accent-700: var(--color-emerald-700);
+        --tw-accent-800: var(--color-emerald-800);
+        --tw-accent-900: var(--color-emerald-900);
+        --tw-accent-950: var(--color-emerald-950);
+        --tw-accent-rgb: 5, 150, 105;
+      }
+
+      [data-tw-accent='violet'] {
+        --tw-accent-50: var(--color-violet-50);
+        --tw-accent-100: var(--color-violet-100);
+        --tw-accent-200: var(--color-violet-200);
+        --tw-accent-300: var(--color-violet-300);
+        --tw-accent-400: var(--color-violet-400);
+        --tw-accent-500: var(--color-violet-500);
+        --tw-accent-600: var(--color-violet-600);
+        --tw-accent-700: var(--color-violet-700);
+        --tw-accent-800: var(--color-violet-800);
+        --tw-accent-900: var(--color-violet-900);
+        --tw-accent-950: var(--color-violet-950);
+        --tw-accent-rgb: 124, 58, 237;
+      }
+
+      [data-tw-accent='rose'] {
+        --tw-accent-50: var(--color-rose-50);
+        --tw-accent-100: var(--color-rose-100);
+        --tw-accent-200: var(--color-rose-200);
+        --tw-accent-300: var(--color-rose-300);
+        --tw-accent-400: var(--color-rose-400);
+        --tw-accent-500: var(--color-rose-500);
+        --tw-accent-600: var(--color-rose-600);
+        --tw-accent-700: var(--color-rose-700);
+        --tw-accent-800: var(--color-rose-800);
+        --tw-accent-900: var(--color-rose-900);
+        --tw-accent-950: var(--color-rose-950);
+        --tw-accent-rgb: 225, 29, 72;
+      }
+
+      [data-tw-accent='orange'] {
+        --tw-accent-50: var(--color-orange-50);
+        --tw-accent-100: var(--color-orange-100);
+        --tw-accent-200: var(--color-orange-200);
+        --tw-accent-300: var(--color-orange-300);
+        --tw-accent-400: var(--color-orange-400);
+        --tw-accent-500: var(--color-orange-500);
+        --tw-accent-600: var(--color-orange-600);
+        --tw-accent-700: var(--color-orange-700);
+        --tw-accent-800: var(--color-orange-800);
+        --tw-accent-900: var(--color-orange-900);
+        --tw-accent-950: var(--color-orange-950);
+        --tw-accent-rgb: 234, 88, 12;
+      }
+
+      /* ==========================================================================
+         5. BOOTSTRAP DARK MODE MAPPED TO TAILWIND SLATE + OKLCH TINTS
+         ========================================================================== */
+      [data-bs-theme='dark'] {
+        --bs-body-color: var(--color-slate-100);
+        --bs-body-color-rgb: 241, 245, 249;
+        --bs-body-bg: var(--color-slate-950);
+        --bs-body-bg-rgb: 2, 6, 23;
+        --bs-emphasis-color: var(--color-white);
+        --bs-emphasis-color-rgb: 255, 255, 255;
+        --bs-secondary-color: var(--color-slate-400);
+        --bs-secondary-color-rgb: 148, 163, 184;
+        --bs-secondary-bg: var(--color-slate-900);
+        --bs-secondary-bg-rgb: 15, 23, 42;
+        --bs-tertiary-color: var(--color-slate-400);
+        --bs-tertiary-bg: oklch(16.5% 0.038 264.5);
+        --bs-tertiary-bg-rgb: 11, 18, 34;
+
+        --bs-border-color: var(--color-slate-800);
+        --bs-border-color-translucent: oklch(98.4% 0.003 247.858 / 0.12);
+
+        --bs-primary: var(--tw-accent-500);
+        --bs-link-color: var(--tw-accent-400);
+        --bs-link-hover-color: var(--tw-accent-300);
+
+        /* Subtle dark mode tints using color-mix for crisp contrast */
+        --bs-primary-text-emphasis: var(--tw-accent-300);
+        --bs-primary-bg-subtle: color-mix(in oklch, var(--tw-accent-500) 16%, transparent);
+        --bs-primary-border-subtle: color-mix(in oklch, var(--tw-accent-500) 35%, transparent);
+
+        --bs-secondary-text-emphasis: var(--color-slate-300);
+        --bs-secondary-bg-subtle: var(--color-slate-800);
+        --bs-secondary-border-subtle: var(--color-slate-700);
+
+        --bs-success-text-emphasis: var(--color-emerald-300);
+        --bs-success-bg-subtle: color-mix(in oklch, var(--color-emerald-500) 15%, transparent);
+        --bs-success-border-subtle: color-mix(in oklch, var(--color-emerald-500) 35%, transparent);
+
+        --bs-info-text-emphasis: var(--color-sky-300);
+        --bs-info-bg-subtle: color-mix(in oklch, var(--color-sky-500) 15%, transparent);
+        --bs-info-border-subtle: color-mix(in oklch, var(--color-sky-500) 35%, transparent);
+
+        --bs-warning-text-emphasis: var(--color-amber-300);
+        --bs-warning-bg-subtle: color-mix(in oklch, var(--color-amber-500) 15%, transparent);
+        --bs-warning-border-subtle: color-mix(in oklch, var(--color-amber-500) 35%, transparent);
+
+        --bs-danger-text-emphasis: var(--color-rose-300);
+        --bs-danger-bg-subtle: color-mix(in oklch, var(--color-rose-500) 15%, transparent);
+        --bs-danger-border-subtle: color-mix(in oklch, var(--color-rose-500) 35%, transparent);
+
+        /* Dark Mode Validation Colors */
+        --bs-form-valid-color: var(--color-emerald-400);
+        --bs-form-valid-border-color: var(--color-emerald-500);
+        --bs-form-invalid-color: var(--color-rose-400);
+        --bs-form-invalid-border-color: var(--color-rose-500);
+      }
+
+      /* ==========================================================================
+         6. BOOTSTRAP COMPONENT OVERRIDES (Buttons, Forms, Accordions, Cards)
+         Ensures Bootstrap components inherit Tailwind OKLCH colors cleanly
+         ========================================================================== */
+      .btn {
+        font-weight: 500;
+        transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .btn-primary {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--tw-accent-600);
+        --bs-btn-border-color: var(--tw-accent-600);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--tw-accent-700);
+        --bs-btn-hover-border-color: var(--tw-accent-700);
+        --bs-btn-focus-shadow-rgb: var(--tw-accent-rgb);
+        --bs-btn-active-color: #ffffff;
+        --bs-btn-active-bg: var(--tw-accent-800);
+        --bs-btn-active-border-color: var(--tw-accent-800);
+        box-shadow: 0 1px 2px oklch(12.9% 0.042 264.695 / 0.12),
+          inset 0 1px 0 oklch(100% 0 0 / 0.15);
+      }
+
+      .btn-outline-primary {
+        --bs-btn-color: var(--tw-accent-600);
+        --bs-btn-border-color: var(--tw-accent-300);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--tw-accent-600);
+        --bs-btn-hover-border-color: var(--tw-accent-600);
+        --bs-btn-active-bg: var(--tw-accent-700);
+        --bs-btn-active-border-color: var(--tw-accent-700);
+      }
+
+      [data-bs-theme='dark'] .btn-outline-primary {
+        --bs-btn-color: var(--tw-accent-400);
+        --bs-btn-border-color: color-mix(in oklch, var(--tw-accent-400) 45%, transparent);
+      }
+
+      .btn-secondary {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-slate-700);
+        --bs-btn-border-color: var(--color-slate-700);
+        --bs-btn-hover-bg: var(--color-slate-800);
+        --bs-btn-hover-border-color: var(--color-slate-800);
+        --bs-btn-active-bg: var(--color-slate-900);
+      }
+
+      .btn-outline-secondary {
+        --bs-btn-color: var(--color-slate-700);
+        --bs-btn-border-color: var(--color-slate-300);
+        --bs-btn-hover-color: var(--color-slate-900);
+        --bs-btn-hover-bg: var(--color-slate-100);
+        --bs-btn-hover-border-color: var(--color-slate-300);
+      }
+
+      [data-bs-theme='dark'] .btn-outline-secondary {
+        --bs-btn-color: var(--color-slate-200);
+        --bs-btn-border-color: var(--color-slate-700);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--color-slate-800);
+        --bs-btn-hover-border-color: var(--color-slate-600);
+      }
+
+      .btn-success {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-emerald-600);
+        --bs-btn-border-color: var(--color-emerald-600);
+        --bs-btn-hover-bg: var(--color-emerald-700);
+        --bs-btn-hover-border-color: var(--color-emerald-700);
+        --bs-btn-active-bg: var(--color-emerald-800);
+      }
+
+      .btn-info {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-sky-500);
+        --bs-btn-border-color: var(--color-sky-500);
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: var(--color-sky-600);
+        --bs-btn-hover-border-color: var(--color-sky-600);
+      }
+
+      .btn-warning {
+        --bs-btn-color: var(--color-amber-950);
+        --bs-btn-bg: var(--color-amber-400);
+        --bs-btn-border-color: var(--color-amber-400);
+        --bs-btn-hover-color: var(--color-amber-950);
+        --bs-btn-hover-bg: var(--color-amber-500);
+        --bs-btn-hover-border-color: var(--color-amber-500);
+      }
+
+      .btn-danger {
+        --bs-btn-color: #ffffff;
+        --bs-btn-bg: var(--color-rose-600);
+        --bs-btn-border-color: var(--color-rose-600);
+        --bs-btn-hover-bg: var(--color-rose-700);
+        --bs-btn-hover-border-color: var(--color-rose-700);
+      }
+
+      /* Form controls & switches */
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--tw-accent-500);
+        box-shadow: 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.2);
+      }
+
+      .form-check-input:checked {
+        background-color: var(--tw-accent-600);
+        border-color: var(--tw-accent-600);
+      }
+
+      .form-check-input:focus {
+        border-color: var(--tw-accent-500);
+        box-shadow: 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.2);
+      }
+
+      /* Range slider styled with active Tailwind OKLCH accent */
+      .form-range::-webkit-slider-thumb {
+        background-color: var(--tw-accent-600);
+      }
+
+      .form-range::-webkit-slider-thumb:active {
+        background-color: var(--tw-accent-700);
+      }
+
+      .form-range::-moz-range-thumb {
+        background-color: var(--tw-accent-600);
+      }
+
+      .form-range:focus::-webkit-slider-thumb {
+        box-shadow: 0 0 0 1px var(--bs-body-bg), 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.25);
+      }
+
+      .form-range:focus::-moz-range-thumb {
+        box-shadow: 0 0 0 1px var(--bs-body-bg), 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.25);
+      }
+
+      /* Selectable Radio Option Cards */
+      .radio-option-card {
+        border: 1px solid var(--bs-border-color);
+        transition: border-color 0.15s ease, background-color 0.15s ease;
+        cursor: pointer;
+      }
+
+      .radio-option-card:has(.form-check-input:checked) {
+        border-color: var(--tw-accent-500);
+        background-color: var(--bs-primary-bg-subtle);
+      }
+
+      /* Interactive Tag / Pill Input Box */
+      .tw-tag-input-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.45rem;
+        min-height: 46px;
+        padding: 0.4rem 0.65rem;
+        border: 1px solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        background-color: var(--bs-body-bg);
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        cursor: text;
+      }
+
+      .tw-tag-input-box:focus-within {
+        border-color: var(--tw-accent-500);
+        box-shadow: 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.2);
+      }
+
+      .tw-tag-input-box input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--bs-body-color);
+        flex: 1 1 120px;
+        min-width: 110px;
+        font-size: 0.92rem;
+        padding: 0.15rem 0.25rem;
+      }
+
+      .tw-tag-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.6rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border-radius: 9999px;
+        background-color: var(--bs-primary-bg-subtle);
+        color: var(--bs-primary-text-emphasis);
+        border: 1px solid var(--bs-primary-border-subtle);
+      }
+
+      .tw-tag-pill button {
+        border: 0;
+        background: transparent;
+        color: inherit;
+        opacity: 0.7;
+        padding: 0;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .tw-tag-pill button:hover {
+        opacity: 1;
+      }
+
+      /* 6-Digit OTP Verification Input Boxes */
+      .otp-input {
+        width: 44px;
+        height: 48px;
+        text-align: center;
+        font-family: var(--bs-font-monospace);
+        font-size: 1.15rem;
+        font-weight: 600;
+        padding: 0;
+      }
+
+      /* Multi-Step Wizard Indicators */
+      .wizard-step-circle {
+        width: 32px;
+        height: 32px;
+        border-radius: 9999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.82rem;
+        font-weight: 700;
+        border: 2px solid var(--bs-border-color);
+        background-color: var(--bs-body-bg);
+        color: var(--bs-secondary-color);
+        transition: all 0.2s ease;
+      }
+
+      .wizard-step-circle.active {
+        border-color: var(--tw-accent-600);
+        background-color: var(--tw-accent-600);
+        color: #ffffff;
+        box-shadow: 0 0 0 4px rgba(var(--tw-accent-rgb), 0.18);
+      }
+
+      .wizard-step-circle.completed {
+        border-color: var(--color-emerald-600);
+        background-color: var(--color-emerald-600);
+        color: #ffffff;
+      }
+
+      /* 11-Step Tailwind Scale Explorer Tile */
+      .scale-step-tile {
+        cursor: pointer;
+        border-radius: 0.625rem;
+        border: 1px solid oklch(0% 0 0 / 0.08);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .scale-step-tile:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px -8px oklch(12.9% 0.042 264.695 / 0.3);
+      }
+
+      /* Nav pills & Accordion */
+      .nav-pills .nav-link.active {
+        background-color: var(--tw-accent-600);
+        color: #ffffff;
+      }
+
+      .accordion {
+        --bs-accordion-active-color: var(--bs-primary-text-emphasis);
+        --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--tw-accent-rgb), 0.2);
+      }
+
+      /* ==========================================================================
+         7. LANDING PAGE POLISH & TAILWIND-INSPIRED VISUAL DEPTH
+         ========================================================================== */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--bs-font-sans-serif);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      .tracking-tight {
+        letter-spacing: -0.025em;
+      }
+
+      .font-mono {
+        font-family: var(--bs-font-monospace);
+      }
+
+      /* Glassmorphic sticky header */
+      .navbar-glass {
+        background-color: color-mix(in oklch, var(--bs-body-bg) 82%, transparent);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--bs-border-color);
+      }
+
+      /* Hero radial glow using active Tailwind OKLCH accent */
+      .hero-section {
+        position: relative;
+        overflow: hidden;
+        background: radial-gradient(
+            ellipse 70% 55% at 50% -10%,
+            color-mix(in oklch, var(--tw-accent-500) 18%, transparent),
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 45% 45% at 88% 20%,
+            color-mix(in oklch, var(--color-sky-400) 12%, transparent),
+            transparent 65%
+          );
+      }
+
+      [data-bs-theme='dark'] .hero-section {
+        background: radial-gradient(
+            ellipse 75% 55% at 50% -10%,
+            color-mix(in oklch, var(--tw-accent-500) 26%, transparent),
+            transparent 72%
+          ),
+          radial-gradient(
+            ellipse 45% 45% at 85% 22%,
+            color-mix(in oklch, var(--color-violet-500) 16%, transparent),
+            transparent 65%
+          );
+      }
+
+      /* Subtle grid overlay in Hero */
+      .hero-grid-bg {
+        background-image: linear-gradient(
+            to right,
+            color-mix(in oklch, var(--bs-border-color) 55%, transparent) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            color-mix(in oklch, var(--bs-border-color) 55%, transparent) 1px,
+            transparent 1px
+          );
+        background-size: 48px 48px;
+        mask-image: radial-gradient(ellipse 80% 65% at 50% 25%, #000 35%, transparent 100%);
+        -webkit-mask-image: radial-gradient(ellipse 80% 65% at 50% 25%, #000 35%, transparent 100%);
+        pointer-events: none;
+      }
+
+      /* Gradient headline highlight */
+      .text-tw-gradient {
+        background: linear-gradient(120deg, var(--tw-accent-600), var(--color-sky-500));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      [data-bs-theme='dark'] .text-tw-gradient {
+        background: linear-gradient(120deg, var(--tw-accent-400), var(--color-sky-300));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* Cards with refined elevation */
+      .feature-card {
+        border: 1px solid var(--bs-border-color);
+        background-color: var(--bs-body-bg);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      [data-bs-theme='dark'] .feature-card {
+        background-color: var(--color-slate-900);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--bs-primary-border-subtle);
+        box-shadow: 0 18px 36px -14px oklch(12.9% 0.042 264.695 / 0.14);
+      }
+
+      .icon-badge {
+        width: 48px;
+        height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.75rem;
+      }
+
+      /* Accent swatch buttons */
+      .accent-dot {
+        width: 24px;
+        height: 24px;
+        border-radius: 9999px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        padding: 0;
+      }
+
+      .accent-dot:hover {
+        transform: scale(1.14);
+      }
+
+      .accent-dot.active {
+        box-shadow: 0 0 0 2px var(--bs-body-bg), 0 0 0 4px var(--tw-accent-500);
+        transform: scale(1.08);
+      }
+
+      /* Palette swatch tile */
+      .swatch-tile {
+        border-radius: 0.625rem;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        border: 1px solid oklch(0% 0 0 / 0.06);
+      }
+
+      .swatch-tile:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px -6px oklch(12.9% 0.042 264.695 / 0.22);
+      }
+
+      /* Pricing featured card ring */
+      .pricing-featured {
+        border: 2px solid var(--tw-accent-500) !important;
+        box-shadow: 0 24px 48px -18px rgba(var(--tw-accent-rgb), 0.28);
+      }
+
+      /* Dark CTA Banner (Always Slate-900/950 styled) */
+      .cta-banner {
+        background: radial-gradient(
+            circle at 15% 20%,
+            color-mix(in oklch, var(--tw-accent-600) 42%, transparent),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 88% 85%,
+            color-mix(in oklch, var(--color-sky-500) 30%, transparent),
+            transparent 50%
+          ),
+          var(--color-slate-900);
+        border: 1px solid var(--color-slate-800);
+      }
+
+      /* Mock Dashboard Window */
+      .dashboard-preview {
+        border: 1px solid var(--bs-border-color);
+        background: var(--bs-body-bg);
+        box-shadow: 0 25px 60px -15px oklch(12.9% 0.042 264.695 / 0.16);
+      }
+
+      [data-bs-theme='dark'] .dashboard-preview {
+        background: var(--color-slate-900);
+        box-shadow: 0 25px 60px -15px oklch(0% 0 0 / 0.55);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ======================================================================
+         NAVIGATION BAR (Bootstrap 5.3 Navbar with Theme & Accent Controls)
+         ====================================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-glass sticky-top py-3">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold tracking-tight" href="#">
+          <span
+            class="d-inline-flex align-items-center justify-content-center rounded-3 text-white"
+            style="width: 34px; height: 34px; background: linear-gradient(135deg, var(--tw-accent-600), var(--color-sky-500));"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
+              <path d="M12 12l8-4.5" />
+              <path d="M12 12v9" />
+              <path d="M12 12L4 7.5" />
+            </svg>
+          </span>
+          <span class="fs-5">Lumina</span>
+          <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle fw-medium" style="font-size: 0.7rem;">
+            BS 5.3 × TW v4
+          </span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Links & Controls -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-2 fw-medium">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#palette">Color System</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#forms">Forms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#faq">FAQ</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <!-- Dark / Light Mode Toggle -->
+            <button
+              id="themeToggleBtn"
+              type="button"
+              class="btn btn-outline-secondary d-inline-flex align-items-center gap-2 px-3 py-2"
+              aria-label="Toggle color mode"
+            >
+              <svg id="themeIconSun" class="d-none" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+              </svg>
+              <svg id="themeIconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+              <span id="themeToggleLabel" class="small">Dark</span>
+            </button>
+
+            <!-- Primary Modal CTA -->
+            <button
+              type="button"
+              class="btn btn-primary px-3 py-2"
+              data-bs-toggle="modal"
+              data-bs-target="#getStartedModal"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======================================================================
+         HERO SECTION (Bootstrap Grid + Tailwind OKLCH Surfaces & Glow)
+         ====================================================================== -->
+    <header class="hero-section py-5 py-lg-6 position-relative">
+      <div class="position-absolute top-0 start-0 w-100 h-100 hero-grid-bg"></div>
+
+      <div class="container position-relative py-4 py-lg-5">
+        <div class="row align-items-center g-5">
+          <!-- Left Copy Column -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <div class="d-inline-flex align-items-center gap-2 rounded-pill px-3 py-1 mb-4 bg-primary-subtle text-primary-emphasis border border-primary-subtle small fw-medium">
+              <span class="rounded-circle d-inline-block" style="width: 8px; height: 8px; background-color: var(--tw-accent-500);"></span>
+              Bootstrap 5.3.9 components · Tailwind v4 OKLCH colors
+            </div>
+
+            <h1 class="display-4 fw-extrabold tracking-tight mb-3 lh-sm">
+              Bootstrap’s grid, <span class="text-tw-gradient">Tailwind’s colors.</span>
+            </h1>
+
+            <p class="lead text-body-secondary mb-4">
+              Keep every Bootstrap 5.3 component—navbars, modals, cards, forms, and dark mode—while upgrading your entire palette to Tailwind CSS v4’s perceptually uniform OKLCH color scales.
+            </p>
+
+            <!-- CTA Row -->
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2"
+                data-bs-toggle="modal"
+                data-bs-target="#getStartedModal"
+              >
+                Start Building Free
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </button>
+              <a href="#palette" class="btn btn-outline-secondary btn-lg px-4 py-2">
+                Explore Color Map
+              </a>
+            </div>
+
+            <!-- Live Tailwind Primary Accent Switcher -->
+            <div class="d-inline-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 p-3 rounded-4 border bg-body-tertiary">
+              <span class="small fw-semibold text-body-secondary">Live Primary Accent:</span>
+              <div class="d-flex align-items-center gap-2" role="group" aria-label="Primary Tailwind Accent Palette">
+                <button type="button" class="accent-dot active" data-accent="indigo" title="Tailwind Indigo" style="background: var(--color-indigo-600);" aria-label="Indigo accent"></button>
+                <button type="button" class="accent-dot" data-accent="sky" title="Tailwind Sky" style="background: var(--color-sky-600);" aria-label="Sky accent"></button>
+                <button type="button" class="accent-dot" data-accent="emerald" title="Tailwind Emerald" style="background: var(--color-emerald-600);" aria-label="Emerald accent"></button>
+                <button type="button" class="accent-dot" data-accent="violet" title="Tailwind Violet" style="background: var(--color-violet-600);" aria-label="Violet accent"></button>
+                <button type="button" class="accent-dot" data-accent="rose" title="Tailwind Rose" style="background: var(--color-rose-600);" aria-label="Rose accent"></button>
+                <button type="button" class="accent-dot" data-accent="orange" title="Tailwind Orange" style="background: var(--color-orange-600);" aria-label="Orange accent"></button>
+              </div>
+              <code id="activeAccentCode" class="small px-2 py-1 rounded bg-body border text-primary-emphasis font-mono">indigo-600</code>
+            </div>
+          </div>
+
+          <!-- Right Interactive UI Preview Column -->
+          <div class="col-lg-6">
+            <div class="dashboard-preview rounded-4 overflow-hidden">
+              <!-- Mock Window Chrome -->
+              <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom bg-body-tertiary">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="rounded-circle" style="width: 11px; height: 11px; background: var(--color-rose-400);"></span>
+                  <span class="rounded-circle" style="width: 11px; height: 11px; background: var(--color-amber-400);"></span>
+                  <span class="rounded-circle" style="width: 11px; height: 11px; background: var(--color-emerald-400);"></span>
+                </div>
+                <span class="small font-mono text-body-secondary">lumina.app/workspace</span>
+                <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle">Live</span>
+              </div>
+
+              <!-- Preview Content -->
+              <div class="p-4">
+                <!-- Stat Row -->
+                <div class="row g-3 mb-4">
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 border bg-body-tertiary">
+                      <div class="small text-body-secondary mb-1">Monthly Revenue</div>
+                      <div class="d-flex align-items-baseline justify-content-between flex-wrap gap-1">
+                        <span class="fs-4 fw-bold tracking-tight">$84,920</span>
+                        <span class="badge bg-success-subtle text-success-emphasis">+18.4%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 rounded-3 border bg-body-tertiary">
+                      <div class="small text-body-secondary mb-1">Deploy Latency</div>
+                      <div class="d-flex align-items-baseline justify-content-between flex-wrap gap-1">
+                        <span class="fs-4 fw-bold tracking-tight">42ms</span>
+                        <span class="badge bg-info-subtle text-info-emphasis">Global Edge</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bootstrap Progress Bars with Tailwind Colors -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between small fw-medium mb-1">
+                    <span>Design Token Adoption</span>
+                    <span class="text-primary-emphasis font-mono">94%</span>
+                  </div>
+                  <div class="progress mb-3" style="height: 8px;">
+                    <div class="progress-bar bg-primary rounded-pill" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+
+                  <div class="d-flex justify-content-between small fw-medium mb-1">
+                    <span>Lighthouse Accessibility</span>
+                    <span class="text-success-emphasis font-mono">100%</span>
+                  </div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-success rounded-pill" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+
+                <!-- Notification Card (Inspired by Tailwind Docs Example, built with Bootstrap classes) -->
+                <div class="d-flex align-items-start gap-3 p-3 rounded-3 border bg-body">
+                  <span
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0 border"
+                    style="width: 40px; height: 40px; background: var(--color-pink-100); border-color: var(--color-pink-300) !important; color: var(--color-pink-700);"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                  </span>
+                  <div class="flex-grow-1">
+                    <p class="mb-1 small">
+                      <span class="fw-semibold">Tom Watson</span> mentioned you in
+                      <span class="fw-semibold">Design System v4</span>
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="text-body-secondary" style="font-size: 0.78rem;">9:37 AM · OKLCH Tokens Synced</span>
+                      <span class="badge bg-warning-subtle text-warning-emphasis">Review</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================================
+         SOCIAL PROOF STRIP
+         ====================================================================== -->
+    <section class="py-4 border-top border-bottom bg-body-tertiary">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center g-4">
+          <div class="col-12 col-lg-auto">
+            <span class="small fw-semibold text-uppercase text-body-secondary" style="letter-spacing: 0.08em;">
+              Built for modern engineering teams
+            </span>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-auto px-lg-4 fw-bold fs-5 text-body-secondary opacity-75">Vercelix</div>
+          <div class="col-6 col-sm-3 col-lg-auto px-lg-4 fw-bold fs-5 text-body-secondary opacity-75">Nordstack</div>
+          <div class="col-6 col-sm-3 col-lg-auto px-lg-4 fw-bold fs-5 text-body-secondary opacity-75">Kinetica</div>
+          <div class="col-6 col-sm-3 col-lg-auto px-lg-4 fw-bold fs-5 text-body-secondary opacity-75">PulseGrid</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURES SECTION (Bootstrap Cards + Tailwind Subtle Tints)
+         ====================================================================== -->
+    <section id="features" class="py-5 my-4">
+      <div class="container py-3">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-2 px-3 py-2">
+              Why Combine Both?
+            </span>
+            <h2 class="display-6 fw-bold tracking-tight mb-3">
+              Zero compromise between components and aesthetics
+            </h2>
+            <p class="text-body-secondary mb-0">
+              Bootstrap gives you rock-solid accessibility, responsive grids, and interactive JavaScript plugins. Tailwind’s OKLCH palette gives your UI modern visual refinement.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Feature 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card feature-card h-100 rounded-4 p-4">
+              <div class="icon-badge bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+                  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+                  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+                  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Perceptual OKLCH Fidelity</h3>
+              <p class="text-body-secondary small mb-0">
+                Uses Tailwind v4’s native <code>oklch()</code> variables so brightness and contrast stay consistent across Indigo, Sky, Emerald, Amber, and Rose.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card feature-card h-100 rounded-4 p-4">
+              <div class="icon-badge bg-success-subtle text-success-emphasis border border-success-subtle mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="7" height="7" x="3" y="3" rx="1" />
+                  <rect width="7" height="7" x="14" y="3" rx="1" />
+                  <rect width="7" height="7" x="14" y="14" rx="1" />
+                  <rect width="7" height="7" x="3" y="14" rx="1" />
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">100% Native Bootstrap 5.3</h3>
+              <p class="text-body-secondary small mb-0">
+                No build step or Sass compiler needed. Drop in the Bootstrap 5.3.9 CDN and override CSS custom properties at runtime in one stylesheet.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card feature-card h-100 rounded-4 p-4">
+              <div class="icon-badge bg-info-subtle text-info-emphasis border border-info-subtle mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">First-Class Slate Dark Mode</h3>
+              <p class="text-body-secondary small mb-0">
+                Bootstrap’s <code>data-bs-theme="dark"</code> is mapped directly to Tailwind <code>slate-950</code>, <code>slate-900</code>, and translucent color-mixed tints.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card feature-card h-100 rounded-4 p-4">
+              <div class="icon-badge bg-warning-subtle text-warning-emphasis border border-warning-subtle mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Instant Brand Re-theming</h3>
+              <p class="text-body-secondary small mb-0">
+                Swap a single <code>data-tw-accent</code> attribute to repaint every button, link, focus ring, progress bar, and subtle badge across the page.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card feature-card h-100 rounded-4 p-4">
+              <div class="icon-badge bg-danger-subtle text-danger-emphasis border border-danger-subtle mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Accessible Focus & Contrast</h3>
+              <p class="text-body-secondary small mb-0">
+                Semantic status colors—Emerald success, Amber warning, Rose danger—are tuned for crisp readability in both light and dark modes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card feature-card h-100 rounded-4 p-4">
+              <div class="icon-badge bg-secondary-subtle text-secondary-emphasis border border-secondary-subtle mb-3">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Ready-to-Ship JS Components</h3>
+              <p class="text-body-secondary small mb-0">
+                Modals, Toasts, Accordions, Collapsible Navbars, and Tabs work out of the box via Bootstrap’s official 5.3.9 JS bundle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INTERACTIVE COLOR MAPPING & COMPONENT SHOWCASE
+         ====================================================================== -->
+    <section id="palette" class="py-5 bg-body-tertiary border-top border-bottom">
+      <div class="container py-3">
+        <div class="row align-items-end justify-content-between mb-4 g-3">
+          <div class="col-lg-7">
+            <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle mb-2 px-3 py-2">
+              Bootstrap → Tailwind Color Map
+            </span>
+            <h2 class="display-6 fw-bold tracking-tight mb-2">
+              Semantic tokens, upgraded
+            </h2>
+            <p class="text-body-secondary mb-0">
+              Click any swatch below to copy its Tailwind CSS variable. Notice how standard Bootstrap buttons, alerts, and badges adopt the exact palette.
+            </p>
+          </div>
+        </div>
+
+        <!-- Semantic Swatch Cards -->
+        <div class="row g-3 mb-5">
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="swatch-tile p-3 bg-body h-100" data-copy="var(--tw-accent-600)">
+              <div class="rounded-3 mb-2" style="height: 54px; background: var(--bs-primary);"></div>
+              <div class="fw-semibold small">.bg-primary</div>
+              <div id="primarySwatchLabel" class="font-mono text-body-secondary" style="font-size: 0.72rem;">indigo-600</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="swatch-tile p-3 bg-body h-100" data-copy="var(--color-slate-600)">
+              <div class="rounded-3 mb-2" style="height: 54px; background: var(--bs-secondary);"></div>
+              <div class="fw-semibold small">.bg-secondary</div>
+              <div class="font-mono text-body-secondary" style="font-size: 0.72rem;">slate-600</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="swatch-tile p-3 bg-body h-100" data-copy="var(--color-emerald-600)">
+              <div class="rounded-3 mb-2" style="height: 54px; background: var(--bs-success);"></div>
+              <div class="fw-semibold small">.bg-success</div>
+              <div class="font-mono text-body-secondary" style="font-size: 0.72rem;">emerald-600</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="swatch-tile p-3 bg-body h-100" data-copy="var(--color-sky-500)">
+              <div class="rounded-3 mb-2" style="height: 54px; background: var(--bs-info);"></div>
+              <div class="fw-semibold small">.bg-info</div>
+              <div class="font-mono text-body-secondary" style="font-size: 0.72rem;">sky-500</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="swatch-tile p-3 bg-body h-100" data-copy="var(--color-amber-500)">
+              <div class="rounded-3 mb-2" style="height: 54px; background: var(--bs-warning);"></div>
+              <div class="fw-semibold small">.bg-warning</div>
+              <div class="font-mono text-body-secondary" style="font-size: 0.72rem;">amber-500</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="swatch-tile p-3 bg-body h-100" data-copy="var(--color-rose-600)">
+              <div class="rounded-3 mb-2" style="height: 54px; background: var(--bs-danger);"></div>
+              <div class="fw-semibold small">.bg-danger</div>
+              <div class="font-mono text-body-secondary" style="font-size: 0.72rem;">rose-600</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 11-Step Tailwind v4 OKLCH Scale Inspector -->
+        <div class="card rounded-4 border p-4 bg-body mb-4">
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+            <div>
+              <h3 class="h6 fw-bold text-uppercase text-body-secondary mb-1" style="letter-spacing: 0.06em;">
+                11-Step Tailwind v4 OKLCH Scale Explorer (50 → 950)
+              </h3>
+              <p class="small text-body-secondary mb-0">
+                Select any Tailwind v4 palette—including new extended neutrals like <code>mauve</code>, <code>olive</code>, <code>mist</code>, and <code>taupe</code>—and click a step to copy its CSS variable.
+              </p>
+            </div>
+            <div style="min-width: 190px;">
+              <label for="scaleFamilySelect" class="visually-hidden">Select Tailwind color family</label>
+              <select id="scaleFamilySelect" class="form-select form-select-sm fw-medium">
+                <option value="indigo" selected>Indigo (Vibrant)</option>
+                <option value="sky">Sky</option>
+                <option value="blue">Blue</option>
+                <option value="cyan">Cyan</option>
+                <option value="teal">Teal</option>
+                <option value="emerald">Emerald</option>
+                <option value="green">Green</option>
+                <option value="lime">Lime</option>
+                <option value="yellow">Yellow</option>
+                <option value="amber">Amber</option>
+                <option value="orange">Orange</option>
+                <option value="red">Red</option>
+                <option value="rose">Rose</option>
+                <option value="pink">Pink</option>
+                <option value="fuchsia">Fuchsia</option>
+                <option value="purple">Purple</option>
+                <option value="violet">Violet</option>
+                <option value="slate">Slate (Cool Neutral)</option>
+                <option value="mauve">Mauve (v4 Neutral)</option>
+                <option value="olive">Olive (v4 Neutral)</option>
+                <option value="mist">Mist (v4 Neutral)</option>
+                <option value="taupe">Taupe (v4 Neutral)</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="tailwindScaleStrip" class="row row-cols-3 row-cols-sm-4 row-cols-md-6 row-cols-xl-11 g-2">
+            <!-- Populated dynamically via JS for all 11 Tailwind steps (50..950) -->
+          </div>
+        </div>
+
+        <!-- Live Bootstrap Component Sampler -->
+        <div class="card rounded-4 border p-4 bg-body">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h3 class="h6 fw-bold text-uppercase text-body-secondary mb-3" style="letter-spacing: 0.06em;">
+                Standard Bootstrap Buttons & Badges
+              </h3>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-outline-primary">Outline Primary</button>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle px-3 py-2">Primary Subtle</span>
+                <span class="badge rounded-pill bg-success-subtle text-success-emphasis border border-success-subtle px-3 py-2">Emerald Success</span>
+                <span class="badge rounded-pill bg-info-subtle text-info-emphasis border border-info-subtle px-3 py-2">Sky Info</span>
+                <span class="badge rounded-pill bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2">Amber Warning</span>
+                <span class="badge rounded-pill bg-danger-subtle text-danger-emphasis border border-danger-subtle px-3 py-2">Rose Danger</span>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <h3 class="h6 fw-bold text-uppercase text-body-secondary mb-3" style="letter-spacing: 0.06em;">
+                Standard Bootstrap Alerts (Tailwind Tints)
+              </h3>
+              <div class="alert alert-primary py-2 px-3 mb-2 small d-flex align-items-center gap-2" role="alert">
+                <strong>Primary:</strong> Powered by active Tailwind OKLCH accent scale.
+              </div>
+              <div class="alert alert-success py-2 px-3 mb-2 small d-flex align-items-center gap-2" role="alert">
+                <strong>Success:</strong> Deployment verified with <code>emerald-50 / emerald-800</code>.
+              </div>
+              <div class="alert alert-danger py-2 px-3 mb-0 small d-flex align-items-center gap-2" role="alert">
+                <strong>Danger:</strong> Action required styled with <code>rose-50 / rose-800</code>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INTERACTIVE FORM SHOWCASE (Bootstrap 5.3 Inputs + Tailwind OKLCH Tokens)
+         ====================================================================== -->
+    <section id="forms" class="py-5 my-4">
+      <div class="container py-3">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-7">
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle mb-2 px-3 py-2">
+              Form Controls Showcase
+            </span>
+            <h2 class="display-6 fw-bold tracking-tight mb-3">
+              Every Bootstrap input, Tailwind-refined
+            </h2>
+            <p class="text-body-secondary mb-0">
+              Try out floating labels, input groups, range sliders, switches, radios, file uploads, and Emerald/Rose validation states—all adapting dynamically to your selected Tailwind accent and dark mode.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <!-- Main Multi-Input Form -->
+          <div class="col-lg-8">
+            <div class="card rounded-4 border bg-body p-4 p-md-5 shadow-sm">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 mb-4 border-bottom">
+                <div>
+                  <h3 class="h5 fw-bold mb-1">Interactive Form &amp; Wizard</h3>
+                  <p class="small text-body-secondary mb-0">Switch between the all-in-one form and a 3-step onboarding wizard.</p>
+                </div>
+
+                <!-- Bootstrap Nav Pills to Switch Form Modes -->
+                <ul class="nav nav-pills bg-body-tertiary p-1 rounded-3 border" id="formModeTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active py-1 px-3 small fw-medium"
+                      id="tabAllInputs"
+                      data-bs-toggle="pill"
+                      data-bs-target="#paneAllInputs"
+                      type="button"
+                      role="tab"
+                      aria-controls="paneAllInputs"
+                      aria-selected="true"
+                    >
+                      All Inputs
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link py-1 px-3 small fw-medium"
+                      id="tabWizard"
+                      data-bs-toggle="pill"
+                      data-bs-target="#paneWizard"
+                      type="button"
+                      role="tab"
+                      aria-controls="paneWizard"
+                      aria-selected="false"
+                    >
+                      3-Step Wizard
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content" id="formModeTabContent">
+                <!-- TAB 1: ALL-IN-ONE BOOTSTRAP INPUTS -->
+                <div class="tab-pane fade show active" id="paneAllInputs" role="tabpanel" aria-labelledby="tabAllInputs" tabindex="0">
+                  <form id="showcaseForm" class="needs-validation" novalidate>
+                <!-- 2. Email & Password with Visibility Toggle -->
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label for="inputWorkEmail" class="form-label small fw-semibold">Work Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputWorkEmail"
+                      placeholder="maya@company.dev"
+                      required
+                    />
+                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword" class="form-label small fw-semibold">Admin Password</label>
+                    <div class="input-group has-validation">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="inputPassword"
+                        placeholder="Min. 8 characters"
+                        minlength="8"
+                        required
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="togglePasswordBtn"
+                        aria-label="Toggle password visibility"
+                      >
+                        Show
+                      </button>
+                      <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Input Group (Subdomain Prefix & Suffix) -->
+                <div class="mb-3">
+                  <label for="inputSubdomain" class="form-label small fw-semibold">Workspace URL</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text bg-body-tertiary text-body-secondary small">https://</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputSubdomain"
+                      placeholder="acme-studio"
+                      pattern="[a-z0-9-]+"
+                      required
+                    />
+                    <span class="input-group-text bg-body-tertiary text-body-secondary small font-mono">.lumina.app</span>
+                    <div class="invalid-feedback">Use lowercase letters, numbers, or hyphens only.</div>
+                  </div>
+                </div>
+
+                <!-- 4. Select Dropdown, Date Picker & Native Color Picker -->
+                <div class="row g-3 mb-4">
+                  <div class="col-md-5">
+                    <label for="inputRoleSelect" class="form-label small fw-semibold">Primary Use Case</label>
+                    <select class="form-select" id="inputRoleSelect" required>
+                      <option value="" selected disabled>Choose a category...</option>
+                      <option value="SaaS Web App">SaaS Web Application</option>
+                      <option value="Design System">Internal Design System</option>
+                      <option value="Marketing Site">Marketing & Landing Page</option>
+                      <option value="Admin Dashboard">Analytics Dashboard</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a use case.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputLaunchDate" class="form-label small fw-semibold">Target Launch Date</label>
+                    <input type="date" class="form-control" id="inputLaunchDate" required />
+                    <div class="invalid-feedback">Pick a launch date.</div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputBrandColor" class="form-label small fw-semibold">Brand Swatch</label>
+                    <div class="d-flex align-items-center gap-2">
+                      <input
+                        type="color"
+                        class="form-control form-control-color w-100"
+                        id="inputBrandColor"
+                        value="#4f46e5"
+                        title="Choose brand color"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 5. Range Slider with Live Readout -->
+                <div class="mb-4 p-3 rounded-3 border bg-body-tertiary">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label for="inputTrafficRange" class="form-label small fw-semibold mb-0">
+                      Estimated Monthly Visitors
+                    </label>
+                    <span id="trafficRangeBadge" class="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle font-mono">
+                      50,000 / mo
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="5"
+                    max="250"
+                    step="5"
+                    value="50"
+                    id="inputTrafficRange"
+                  />
+                  <div class="d-flex justify-content-between text-body-secondary" style="font-size: 0.72rem;">
+                    <span>5k</span>
+                    <span>125k</span>
+                    <span>250k+</span>
+                  </div>
+                </div>
+
+                <!-- 6. Radio Button Cards (Deployment Tier) -->
+                <div class="mb-4">
+                  <label class="form-label small fw-semibold d-block mb-2">Deployment Region</label>
+                  <div class="row g-2">
+                    <div class="col-sm-4">
+                      <label class="radio-option-card rounded-3 p-3 d-block h-100">
+                        <div class="form-check mb-1">
+                          <input class="form-check-input" type="radio" name="deployTier" id="tierEdge" value="Global Edge" checked />
+                          <span class="form-check-label fw-semibold small">Global Edge</span>
+                        </div>
+                        <span class="d-block text-body-secondary" style="font-size: 0.75rem;">Auto-routed CDN nodes</span>
+                      </label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="radio-option-card rounded-3 p-3 d-block h-100">
+                        <div class="form-check mb-1">
+                          <input class="form-check-input" type="radio" name="deployTier" id="tierVpc" value="Dedicated VPC" />
+                          <span class="form-check-label fw-semibold small">Dedicated VPC</span>
+                        </div>
+                        <span class="d-block text-body-secondary" style="font-size: 0.75rem;">Isolated private cluster</span>
+                      </label>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="radio-option-card rounded-3 p-3 d-block h-100">
+                        <div class="form-check mb-1">
+                          <input class="form-check-input" type="radio" name="deployTier" id="tierSelf" value="Self-Hosted" />
+                          <span class="form-check-label fw-semibold small">Self-Hosted</span>
+                        </div>
+                        <span class="d-block text-body-secondary" style="font-size: 0.75rem;">Docker & Kubernetes</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 7. File Upload Input -->
+                <div class="mb-4">
+                  <label for="inputBrandFile" class="form-label small fw-semibold">
+                    Upload Design Tokens or Logo <span class="text-body-secondary fw-normal">(Optional)</span>
+                  </label>
+                  <input class="form-control" type="file" id="inputBrandFile" accept=".json,.css,.svg,.png" />
+                  <div class="form-text small">Supports <code>.json</code>, <code>.css</code>, <code>.svg</code>, or <code>.png</code> up to 5 MB.</div>
+                </div>
+
+                <!-- 8. Checkboxes & Switch Toggles -->
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <span class="form-label small fw-semibold d-block mb-2">Included Modules</span>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" value="OKLCH Palette" id="modOklch" checked />
+                      <label class="form-check-label small" for="modOklch">Tailwind v4 OKLCH Palette</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input" type="checkbox" value="Dark Mode" id="modDark" checked />
+                      <label class="form-check-label small" for="modDark">Slate Dark Mode Sync</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Figma Bridge" id="modFigma" />
+                      <label class="form-check-label small" for="modFigma">Figma Variable Bridge</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <span class="form-label small fw-semibold d-block mb-2">Preferences</span>
+                    <div class="form-check form-switch mb-2">
+                      <input class="form-check-input" type="checkbox" role="switch" id="switchDigest" checked />
+                      <label class="form-check-label small" for="switchDigest">Weekly contrast audit report</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="switchTerms" required />
+                      <label class="form-check-label small" for="switchTerms">I agree to the Terms & Privacy Policy</label>
+                      <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 9. Textarea with Character Counter -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <label for="inputNotes" class="form-label small fw-semibold mb-0">Project Notes</label>
+                    <span id="notesCharCount" class="small font-mono text-body-secondary">0 / 240</span>
+                  </div>
+                  <textarea
+                    class="form-control"
+                    id="inputNotes"
+                    rows="3"
+                    maxlength="240"
+                    placeholder="Describe your custom color requirements or existing Bootstrap setup..."
+                  ></textarea>
+                </div>
+
+                <!-- 10. Searchable Tag / Pill Input -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <label for="tagTextInput" class="form-label small fw-semibold mb-0">
+                      Design Tokens &amp; Tags <span class="text-body-secondary fw-normal">(Press Enter or click chips)</span>
+                    </label>
+                    <span id="tagCountBadge" class="small font-mono text-body-secondary">3 tags</span>
+                  </div>
+                  <div id="tagInputBox" class="tw-tag-input-box">
+                    <input
+                      type="text"
+                      id="tagTextInput"
+                      placeholder="Add a tag (e.g. oklch, rtl, accessibility)..."
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="d-flex flex-wrap align-items-center gap-1 mt-2">
+                    <span class="text-body-secondary me-1" style="font-size: 0.75rem;">Quick add:</span>
+                    <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 rounded-pill tag-suggestion-btn" data-tag="tailwind-v4" style="font-size: 0.74rem;">+ tailwind-v4</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 rounded-pill tag-suggestion-btn" data-tag="wcag-aaa" style="font-size: 0.74rem;">+ wcag-aaa</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 rounded-pill tag-suggestion-btn" data-tag="bootstrap-5.3" style="font-size: 0.74rem;">+ bootstrap-5.3</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2 rounded-pill tag-suggestion-btn" data-tag="p3-gamut" style="font-size: 0.74rem;">+ p3-gamut</button>
+                  </div>
+                </div>
+
+                <!-- 11. Datalist Autocomplete, Segmented Button Group & OTP Code -->
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <label for="inputFrameworkDatalist" class="form-label small fw-semibold">Target Stack (Datalist)</label>
+                    <input
+                      class="form-control"
+                      list="frameworkOptions"
+                      id="inputFrameworkDatalist"
+                      placeholder="Type to search stack..."
+                    />
+                    <datalist id="frameworkOptions">
+                      <option value="Vanilla HTML + Bootstrap 5.3"></option>
+                      <option value="React + Bootstrap"></option>
+                      <option value="Vue 3 + Bootstrap"></option>
+                      <option value="Laravel Blade + Bootstrap"></option>
+                      <option value="Django Templates + Bootstrap"></option>
+                    </datalist>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label small fw-semibold d-block">Team Size (Segmented Group)</label>
+                    <div class="btn-group w-100" role="group" aria-label="Team size selection">
+                      <input type="radio" class="btn-check" name="teamSize" id="sizeSolo" value="1–5" autocomplete="off" checked />
+                      <label class="btn btn-outline-primary btn-sm py-2" for="sizeSolo">1–5</label>
+
+                      <input type="radio" class="btn-check" name="teamSize" id="sizeMid" value="6–25" autocomplete="off" />
+                      <label class="btn btn-outline-primary btn-sm py-2" for="sizeMid">6–25</label>
+
+                      <input type="radio" class="btn-check" name="teamSize" id="sizeOrg" value="26–100" autocomplete="off" />
+                      <label class="btn btn-outline-primary btn-sm py-2" for="sizeOrg">26–100</label>
+
+                      <input type="radio" class="btn-check" name="teamSize" id="sizeEnt" value="100+" autocomplete="off" />
+                      <label class="btn btn-outline-primary btn-sm py-2" for="sizeEnt">100+</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 12. 6-Digit Verification / Invite Code Input -->
+                <div class="mb-4 p-3 rounded-3 border bg-body-tertiary">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label class="form-label small fw-semibold mb-0">Optional Invite Verification Code</label>
+                    <span class="small text-body-secondary">Auto-advances on input</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2" id="otpGroup">
+                    <input type="text" inputmode="numeric" maxlength="1" class="form-control otp-input" aria-label="Digit 1" placeholder="•" />
+                    <input type="text" inputmode="numeric" maxlength="1" class="form-control otp-input" aria-label="Digit 2" placeholder="•" />
+                    <input type="text" inputmode="numeric" maxlength="1" class="form-control otp-input" aria-label="Digit 3" placeholder="•" />
+                    <input type="text" inputmode="numeric" maxlength="1" class="form-control otp-input" aria-label="Digit 4" placeholder="•" />
+                    <input type="text" inputmode="numeric" maxlength="1" class="form-control otp-input" aria-label="Digit 5" placeholder="•" />
+                    <input type="text" inputmode="numeric" maxlength="1" class="form-control otp-input" aria-label="Digit 6" placeholder="•" />
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-2 border-top">
+                  <button type="reset" id="resetShowcaseFormBtn" class="btn btn-outline-secondary px-4">
+                    Reset Form
+                  </button>
+                  <button type="submit" class="btn btn-primary px-4">
+                    Create Configuration
+                  </button>
+                </div>
+              </form>
+
+              <!-- Live Submission Summary Box (hidden until valid submit) -->
+              <div id="formSummaryAlert" class="alert alert-success mt-4 mb-0 d-none rounded-3" role="status">
+                <div class="fw-bold small mb-1">Configuration validated & saved!</div>
+                <div id="formSummaryDetails" class="small font-mono"></div>
+              </div>
+                </div>
+
+                <!-- TAB 2: 3-STEP ONBOARDING WIZARD -->
+                <div class="tab-pane fade" id="paneWizard" role="tabpanel" aria-labelledby="tabWizard" tabindex="0">
+                  <!-- Wizard Progress Header -->
+                  <div class="mb-4">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="wizard-step-circle active" data-step-indicator="1">1</span>
+                        <span class="small fw-semibold d-none d-sm-inline">Project</span>
+                      </div>
+                      <div class="flex-grow-1 mx-2 mx-sm-3">
+                        <div class="progress" style="height: 6px;">
+                          <div id="wizardProgressBar" class="progress-bar bg-primary rounded-pill" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="wizard-step-circle" data-step-indicator="2">2</span>
+                        <span class="small fw-semibold d-none d-sm-inline">Theme</span>
+                      </div>
+                      <div class="flex-grow-1 mx-2 mx-sm-3 d-none d-sm-block">
+                        <div class="border-top"></div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="wizard-step-circle" data-step-indicator="3">3</span>
+                        <span class="small fw-semibold d-none d-sm-inline">Review</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form id="wizardForm" novalidate>
+                    <!-- Step 1: Project Identity -->
+                    <div class="wizard-step-pane" data-wizard-step="1">
+                      <h4 class="h6 fw-bold mb-3">Step 1: Project Identity</h4>
+                      <div class="mb-3">
+                        <label for="wizProjectName" class="form-label small fw-semibold">Project Name</label>
+                        <input type="text" class="form-control" id="wizProjectName" placeholder="e.g. Aurora Dashboard" required />
+                        <div class="invalid-feedback">Please enter a project name to continue.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="wizOwnerEmail" class="form-label small fw-semibold">Lead Maintainer Email</label>
+                        <input type="email" class="form-control" id="wizOwnerEmail" placeholder="lead@aurora.dev" required />
+                        <div class="invalid-feedback">Please enter a valid maintainer email.</div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2: Tailwind Theme Preferences -->
+                    <div class="wizard-step-pane d-none" data-wizard-step="2">
+                      <h4 class="h6 fw-bold mb-3">Step 2: Tailwind Palette &amp; Mode</h4>
+                      <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                          <label for="wizAccentSelect" class="form-label small fw-semibold">Default Primary Scale</label>
+                          <select id="wizAccentSelect" class="form-select">
+                            <option value="indigo" selected>Indigo (indigo-600)</option>
+                            <option value="sky">Sky (sky-600)</option>
+                            <option value="emerald">Emerald (emerald-600)</option>
+                            <option value="violet">Violet (violet-600)</option>
+                            <option value="rose">Rose (rose-600)</option>
+                            <option value="orange">Orange (orange-600)</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="wizNeutralSelect" class="form-label small fw-semibold">Neutral Surface Family</label>
+                          <select id="wizNeutralSelect" class="form-select">
+                            <option value="slate" selected>Slate (Cool Blue-Gray)</option>
+                            <option value="mauve">Mauve (Warm Violet-Gray)</option>
+                            <option value="olive">Olive (Organic Gray)</option>
+                            <option value="mist">Mist (Crisp Cyan-Gray)</option>
+                            <option value="taupe">Taupe (Earthy Warm Gray)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" role="switch" id="wizSyncLiveAccent" checked />
+                        <label class="form-check-label small" for="wizSyncLiveAccent">Apply chosen accent to this page immediately</label>
+                      </div>
+                    </div>
+
+                    <!-- Step 3: Review & Provision -->
+                    <div class="wizard-step-pane d-none" data-wizard-step="3">
+                      <h4 class="h6 fw-bold mb-3">Step 3: Review &amp; Provision</h4>
+                      <div class="p-3 rounded-3 border bg-body-tertiary mb-3">
+                        <dl class="row small mb-0 gy-2">
+                          <dt class="col-sm-4 text-body-secondary">Project Name</dt>
+                          <dd class="col-sm-8 fw-semibold mb-0" id="wizReviewName">—</dd>
+                          <dt class="col-sm-4 text-body-secondary">Maintainer</dt>
+                          <dd class="col-sm-8 font-mono mb-0" id="wizReviewEmail">—</dd>
+                          <dt class="col-sm-4 text-body-secondary">Primary Accent</dt>
+                          <dd class="col-sm-8 mb-0"><span id="wizReviewAccent" class="badge bg-primary-subtle text-primary-emphasis border border-primary-subtle font-mono">indigo-600</span></dd>
+                          <dt class="col-sm-4 text-body-secondary">Neutral Surface</dt>
+                          <dd class="col-sm-8 font-mono mb-0" id="wizReviewNeutral">slate</dd>
+                        </dl>
+                      </div>
+                      <div class="alert alert-info small py-2 mb-0" role="alert">
+                        Clicking <strong>Launch Theme Kit</strong> validates all steps and prepares your ready-to-use CSS variables.
+                      </div>
+                    </div>
+
+                    <!-- Wizard Navigation Footer -->
+                    <div class="d-flex justify-content-between align-items-center pt-3 mt-4 border-top">
+                      <button type="button" id="wizardPrevBtn" class="btn btn-outline-secondary px-4" disabled>
+                        Back
+                      </button>
+                      <div class="d-flex gap-2">
+                        <button type="button" id="wizardNextBtn" class="btn btn-primary px-4">
+                          Next Step
+                        </button>
+                        <button type="submit" id="wizardFinishBtn" class="btn btn-success px-4 d-none">
+                          Launch Theme Kit
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+
+                  <div id="wizardSuccessBox" class="alert alert-success mt-4 mb-0 d-none rounded-3" role="status">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                      <div>
+                        <div class="fw-bold small">Theme Kit Provisioned!</div>
+                        <div id="wizardSuccessText" class="small"></div>
+                      </div>
+                      <button type="button" id="wizardRestartBtn" class="btn btn-sm btn-outline-success">Start Over</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FINAL CTA BANNER (Tailwind Slate-900 + Accent Gradient)
+         ====================================================================== -->
+    <section class="py-5">
+      <div class="container py-3">
+        <div class="cta-banner rounded-4 p-4 p-md-5 text-white text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-7">
+              <h2 class="display-6 fw-bold tracking-tight mb-3">
+                Ready to modernize your Bootstrap UI?
+              </h2>
+              <p class="mb-4" style="color: var(--color-slate-300);">
+                Join thousands of developers upgrading their Bootstrap 5.3 apps with Tailwind’s signature color system.
+              </p>
+              <form id="newsletterForm" class="row g-2 justify-content-center" novalidate>
+                <div class="col-sm-7">
+                  <input
+                    type="email"
+                    id="newsletterEmail"
+                    class="form-control form-control-lg border-0"
+                    style="background: rgba(255, 255, 255, 0.1); color: #ffffff;"
+                    placeholder="you@company.com"
+                    required
+                  />
+                </div>
+                <div class="col-sm-auto">
+                  <button type="submit" class="btn btn-primary btn-lg px-4 w-100">
+                    Get Token Kit
+                  </button>
+                </div>
+              </form>
+              <div id="newsletterFeedback" class="small mt-2" style="color: var(--color-emerald-300); min-height: 1.25rem;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FOOTER
+         ====================================================================== -->
+    <footer class="py-5 border-top bg-body-tertiary">
+      <div class="container">
+        <div class="row g-4 justify-content-between">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-2 fw-bold fs-5 mb-2">
+              <span
+                class="d-inline-flex align-items-center justify-content-center rounded-3 text-white"
+                style="width: 28px; height: 28px; background: linear-gradient(135deg, var(--tw-accent-600), var(--color-sky-500));"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
+                </svg>
+              </span>
+              Lumina
+            </div>
+            <p class="small text-body-secondary mb-0">
+              Built with Bootstrap 5.3.9 layout & components, styled with Tailwind CSS v4’s OKLCH color palette.
+            </p>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <h4 class="h6 fw-bold mb-3">Product</h4>
+            <ul class="list-unstyled small d-flex flex-column gap-2">
+              <li><a href="#features" class="text-decoration-none text-body-secondary">Features</a></li>
+              <li><a href="#palette" class="text-decoration-none text-body-secondary">Color System</a></li>
+              <li><a href="#forms" class="text-decoration-none text-body-secondary">Form Inputs</a></li>
+              <li><a href="#pricing" class="text-decoration-none text-body-secondary">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <h4 class="h6 fw-bold mb-3">Resources</h4>
+            <ul class="list-unstyled small d-flex flex-column gap-2">
+              <li><a href="#faq" class="text-decoration-none text-body-secondary">Documentation</a></li>
+              <li><a href="#palette" class="text-decoration-none text-body-secondary">OKLCH Reference</a></li>
+              <li><a href="#" class="text-decoration-none text-body-secondary" data-bs-toggle="modal" data-bs-target="#getStartedModal">Starter Kit</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-top mt-4 pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 small text-body-secondary">
+          <span>© 2026 Lumina UI. All rights reserved.</span>
+          <span>Bootstrap v5.3.9 · Tailwind v4 Palette</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================================================================
+         BOOTSTRAP MODAL (Get Started)
+         ====================================================================== -->
+    <div class="modal fade" id="getStartedModal" tabindex="-1" aria-labelledby="getStartedModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border">
+          <div class="modal-header border-bottom-0 pb-0">
+            <h3 class="modal-title h5 fw-bold" id="getStartedModalLabel">Create your free workspace</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body pt-2">
+            <p class="small text-body-secondary mb-3">
+              Get instant access to the Bootstrap 5.3 + Tailwind v4 OKLCH starter template and theme generator.
+            </p>
+            <form id="modalSignupForm" novalidate>
+              <div class="mb-3">
+                <label for="signupName" class="form-label small fw-medium">Full name</label>
+                <input type="text" class="form-control" id="signupName" placeholder="Alex Rivera" required />
+              </div>
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label small fw-medium">Work email</label>
+                <input type="email" class="form-control" id="signupEmail" placeholder="alex@studio.dev" required />
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-2">Launch Workspace</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         BOOTSTRAP TOAST NOTIFICATION (Replaces alert() for Copy / Form feedback)
+         ====================================================================== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090;">
+      <div id="liveToast" class="toast align-items-center border shadow-lg rounded-3" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body small fw-medium" id="toastMessage">
+            Copied to clipboard!
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5.3.9 JS Bundle with Popper (exact CDN provided) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Interactive Controls Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const htmlEl = document.documentElement;
+        const toastEl = document.getElementById('liveToast');
+        const toastMessageEl = document.getElementById('toastMessage');
+        const toastInstance = toastEl ? new bootstrap.Toast(toastEl, { delay: 2600 }) : null;
+
+        /**
+         * Displays a non-blocking Bootstrap toast message.
+         * @param {string} msg - Feedback text to show.
+         */
+        function showToast(msg) {
+          if (!toastInstance || !toastMessageEl) return;
+          toastMessageEl.textContent = msg;
+          toastInstance.show();
+        }
+
+        /**
+         * Copies text to clipboard safely inside iframes using execCommand fallback.
+         * @param {string} text - String to copy.
+         */
+        function copyToClipboard(text) {
+          try {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            tempInput.setAttribute('readonly', '');
+            tempInput.style.position = 'absolute';
+            tempInput.style.left = '-9999px';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(`Copied: ${text}`);
+          } catch (err) {
+            showToast(`Token: ${text}`);
+          }
+        }
+
+        /* --------------------------------------------------------------------
+           1. LIGHT / DARK MODE TOGGLE (Bootstrap data-bs-theme)
+           -------------------------------------------------------------------- */
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeToggleLabel = document.getElementById('themeToggleLabel');
+        const sunIcon = document.getElementById('themeIconSun');
+        const moonIcon = document.getElementById('themeIconMoon');
+
+        function applyTheme(theme) {
+          htmlEl.setAttribute('data-bs-theme', theme);
+          const isDark = theme === 'dark';
+          sunIcon.classList.toggle('d-none', !isDark);
+          moonIcon.classList.toggle('d-none', isDark);
+          themeToggleLabel.textContent = isDark ? 'Light' : 'Dark';
+        }
+
+        // Respect system preference initially
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          applyTheme('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+          const current = htmlEl.getAttribute('data-bs-theme') || 'light';
+          applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        /* --------------------------------------------------------------------
+           2. LIVE TAILWIND PRIMARY ACCENT SWITCHER
+           -------------------------------------------------------------------- */
+        const accentButtons = document.querySelectorAll('.accent-dot');
+        const activeAccentCode = document.getElementById('activeAccentCode');
+        const primarySwatchLabel = document.getElementById('primarySwatchLabel');
+
+        accentButtons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const accent = btn.getAttribute('data-accent');
+            htmlEl.setAttribute('data-tw-accent', accent);
+
+            accentButtons.forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const labelText = `${accent}-600`;
+            if (activeAccentCode) activeAccentCode.textContent = labelText;
+            if (primarySwatchLabel) primarySwatchLabel.textContent = labelText;
+
+            showToast(`Switched Bootstrap --bs-primary to Tailwind ${labelText}`);
+          });
+        });
+
+        /* --------------------------------------------------------------------
+           3. CLICK-TO-COPY COLOR SWATCHES
+           -------------------------------------------------------------------- */
+        document.querySelectorAll('.swatch-tile').forEach((tile) => {
+          tile.addEventListener('click', () => {
+            const token = tile.getAttribute('data-copy');
+            if (token) copyToClipboard(token);
+          });
+        });
+
+        /* --------------------------------------------------------------------
+           4. PRICING MONTHLY / ANNUAL SWITCH
+           -------------------------------------------------------------------- */
+        const billingSwitch = document.getElementById('billingSwitch');
+        const priceAmounts = document.querySelectorAll('.price-amount');
+
+        if (billingSwitch) {
+          billingSwitch.addEventListener('change', () => {
+            const isAnnual = billingSwitch.checked;
+            priceAmounts.forEach((el) => {
+              el.textContent = isAnnual
+                ? el.getAttribute('data-annual')
+                : el.getAttribute('data-monthly');
+            });
+          });
+        }
+
+        /* --------------------------------------------------------------------
+           5. FORM SUBMISSIONS (Newsletter & Modal — No native alert())
+           -------------------------------------------------------------------- */
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterEmail = document.getElementById('newsletterEmail');
+        const newsletterFeedback = document.getElementById('newsletterFeedback');
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailVal = newsletterEmail.value.trim();
+            if (!emailVal || !emailVal.includes('@')) {
+              newsletterFeedback.style.color = 'var(--color-rose-300)';
+              newsletterFeedback.textContent = 'Please enter a valid email address.';
+              return;
+            }
+            newsletterFeedback.style.color = 'var(--color-emerald-300)';
+            newsletterFeedback.textContent = `Token kit link sent to ${emailVal}!`;
+            newsletterEmail.value = '';
+            showToast('Sent! Check your inbox for the Token Kit.');
+          });
+        }
+
+        const modalSignupForm = document.getElementById('modalSignupForm');
+        const getStartedModalEl = document.getElementById('getStartedModal');
+
+        if (modalSignupForm && getStartedModalEl) {
+          modalSignupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameVal = document.getElementById('signupName').value.trim();
+            const emailVal = document.getElementById('signupEmail').value.trim();
+            if (!nameVal || !emailVal || !emailVal.includes('@')) {
+              showToast('Please fill in your name and a valid email.');
+              return;
+            }
+            const modalInstance = bootstrap.Modal.getInstance(getStartedModalEl);
+            if (modalInstance) modalInstance.hide();
+            modalSignupForm.reset();
+            showToast(`Welcome aboard, ${nameVal}! Your workspace is ready.`);
+          });
+        }
+
+        /* --------------------------------------------------------------------
+           6. INTERACTIVE EXAMPLE FORM CONTROLS & VALIDATION
+           -------------------------------------------------------------------- */
+        const showcaseForm = document.getElementById('showcaseForm');
+        const trafficRange = document.getElementById('inputTrafficRange');
+        const trafficRangeBadge = document.getElementById('trafficRangeBadge');
+        const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+        const inputPassword = document.getElementById('inputPassword');
+        const inputNotes = document.getElementById('inputNotes');
+        const notesCharCount = document.getElementById('notesCharCount');
+        const inputBrandColor = document.getElementById('inputBrandColor');
+        const brandColorHex = document.getElementById('brandColorHex');
+        const brandColorPreview = document.getElementById('brandColorPreview');
+        const formSummaryAlert = document.getElementById('formSummaryAlert');
+        const formSummaryDetails = document.getElementById('formSummaryDetails');
+        const resetShowcaseFormBtn = document.getElementById('resetShowcaseFormBtn');
+
+        // Live range slider readout
+        if (trafficRange && trafficRangeBadge) {
+          trafficRange.addEventListener('input', () => {
+            const val = Number(trafficRange.value);
+            trafficRangeBadge.textContent = `${(val * 1000).toLocaleString()} / mo`;
+          });
+        }
+
+        // Password show / hide toggle
+        if (togglePasswordBtn && inputPassword) {
+          togglePasswordBtn.addEventListener('click', () => {
+            const isHidden = inputPassword.type === 'password';
+            inputPassword.type = isHidden ? 'text' : 'password';
+            togglePasswordBtn.textContent = isHidden ? 'Hide' : 'Show';
+          });
+        }
+
+        // Textarea character counter
+        if (inputNotes && notesCharCount) {
+          inputNotes.addEventListener('input', () => {
+            notesCharCount.textContent = `${inputNotes.value.length} / 240`;
+          });
+        }
+
+        // Live color picker swatch preview
+        if (inputBrandColor && brandColorHex && brandColorPreview) {
+          inputBrandColor.addEventListener('input', () => {
+            const hex = inputBrandColor.value.toUpperCase();
+            brandColorHex.textContent = hex;
+            brandColorPreview.style.backgroundColor = hex;
+          });
+        }
+
+        // Reset validation state & summary
+        if (resetShowcaseFormBtn && showcaseForm) {
+          resetShowcaseFormBtn.addEventListener('click', () => {
+            showcaseForm.classList.remove('was-validated');
+            if (formSummaryAlert) formSummaryAlert.classList.add('d-none');
+            if (trafficRangeBadge) trafficRangeBadge.textContent = '50,000 / mo';
+            if (notesCharCount) notesCharCount.textContent = '0 / 240';
+            if (brandColorHex) brandColorHex.textContent = '#4F46E5';
+            if (brandColorPreview) brandColorPreview.style.backgroundColor = '#4f46e5';
+            showToast('Form reset to default values.');
+          });
+        }
+
+        // Bootstrap custom validation & live summary output
+        if (showcaseForm) {
+          showcaseForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            showcaseForm.classList.add('was-validated');
+
+            if (!showcaseForm.checkValidity()) {
+              if (formSummaryAlert) formSummaryAlert.classList.add('d-none');
+              showToast('Please fix the highlighted fields in Rose.');
+              return;
+            }
+
+            const firstName = document.getElementById('inputFirstName').value.trim();
+            const subdomain = document.getElementById('inputSubdomain').value.trim();
+            const useCase = document.getElementById('inputRoleSelect').value;
+            const tier = showcaseForm.querySelector('input[name="deployTier"]:checked')?.value || 'Global Edge';
+            const visitors = trafficRange ? `${(Number(trafficRange.value) * 1000).toLocaleString()}/mo` : '50,000/mo';
+
+            if (formSummaryDetails && formSummaryAlert) {
+              formSummaryDetails.textContent = `${firstName} · https://${subdomain}.lumina.app · ${useCase} · ${tier} · ${visitors}`;
+              formSummaryAlert.classList.remove('d-none');
+            }
+
+            showToast('Workspace configuration validated & saved!');
+          });
+        }
+
+        /* --------------------------------------------------------------------
+           7. 11-STEP TAILWIND v4 OKLCH SCALE EXPLORER (50 -> 950)
+           -------------------------------------------------------------------- */
+        const scaleFamilySelect = document.getElementById('scaleFamilySelect');
+        const tailwindScaleStrip = document.getElementById('tailwindScaleStrip');
+        const scaleSteps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
+
+        /**
+         * Renders all 11 OKLCH swatch tiles for a given Tailwind v4 color family.
+         * @param {string} family - Tailwind color name (e.g. "indigo", "mauve").
+         */
+        function renderTailwindScale(family) {
+          if (!tailwindScaleStrip) return;
+          tailwindScaleStrip.innerHTML = '';
+
+          scaleSteps.forEach((step) => {
+            const varName = `--color-${family}-${step}`;
+            const isDarkStep = step >= 500;
+            const col = document.createElement('div');
+            col.className = 'col';
+
+            col.innerHTML = `
+              <button
+                type="button"
+                class="scale-step-tile w-100 p-2 text-start d-flex flex-column justify-content-between"
+                style="height: 76px; background-color: var(${varName}); color: ${isDarkStep ? '#ffffff' : 'var(--color-slate-900)'};"
+                title="Click to copy var(${varName})"
+              >
+                <span class="font-mono fw-semibold" style="font-size: 0.72rem; opacity: 0.92;">${step}</span>
+                <span class="text-truncate" style="font-size: 0.65rem; opacity: 0.8;">${family}</span>
+              </button>
+            `;
+
+            const tileBtn = col.querySelector('button');
+            tileBtn.addEventListener('click', () => {
+              const computedVal = getComputedStyle(document.documentElement)
+                .getPropertyValue(varName)
+                .trim();
+              copyToClipboard(`var(${varName}) /* ${computedVal} */`);
+            });
+
+            tailwindScaleStrip.appendChild(col);
+          });
+        }
+
+        if (scaleFamilySelect && tailwindScaleStrip) {
+          renderTailwindScale(scaleFamilySelect.value);
+          scaleFamilySelect.addEventListener('change', () => {
+            renderTailwindScale(scaleFamilySelect.value);
+          });
+        }
+
+        /* --------------------------------------------------------------------
+           8. INTERACTIVE SEARCHABLE TAG / PILL INPUT & 6-DIGIT OTP INPUT
+           -------------------------------------------------------------------- */
+        const tagInputBox = document.getElementById('tagInputBox');
+        const tagTextInput = document.getElementById('tagTextInput');
+        const tagCountBadge = document.getElementById('tagCountBadge');
+        let activeTags = ['oklch', 'dark-mode', 'responsive'];
+
+        function renderTags() {
+          if (!tagInputBox || !tagTextInput) return;
+          tagInputBox.querySelectorAll('.tw-tag-pill').forEach((el) => el.remove());
+
+          activeTags.forEach((tag) => {
+            const pill = document.createElement('span');
+            pill.className = 'tw-tag-pill';
+            pill.innerHTML = `
+              <span>${tag}</span>
+              <button type="button" aria-label="Remove ${tag}">&times;</button>
+            `;
+            pill.querySelector('button').addEventListener('click', () => {
+              activeTags = activeTags.filter((t) => t !== tag);
+              renderTags();
+            });
+            tagInputBox.insertBefore(pill, tagTextInput);
+          });
+
+          if (tagCountBadge) {
+            tagCountBadge.textContent = `${activeTags.length} ${activeTags.length === 1 ? 'tag' : 'tags'}`;
+          }
+        }
+
+        function addTag(rawValue) {
+          const clean = rawValue.trim().toLowerCase().replace(/[^a-z0-9.-]/g, '');
+          if (!clean) return;
+          if (activeTags.includes(clean)) {
+            showToast(`Tag "${clean}" is already added.`);
+            return;
+          }
+          if (activeTags.length >= 10) {
+            showToast('Maximum of 10 tags reached.');
+            return;
+          }
+          activeTags.push(clean);
+          renderTags();
+        }
+
+        if (tagInputBox && tagTextInput) {
+          renderTags();
+
+          tagInputBox.addEventListener('click', () => tagTextInput.focus());
+
+          tagTextInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ',') {
+              e.preventDefault();
+              addTag(tagTextInput.value);
+              tagTextInput.value = '';
+            } else if (e.key === 'Backspace' && tagTextInput.value === '' && activeTags.length > 0) {
+              activeTags.pop();
+              renderTags();
+            }
+          });
+
+          document.querySelectorAll('.tag-suggestion-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const suggested = btn.getAttribute('data-tag');
+              if (suggested) addTag(suggested);
+            });
+          });
+        }
+
+        // OTP auto-advance & backspace handling
+        const otpInputs = Array.from(document.querySelectorAll('#otpGroup .otp-input'));
+        otpInputs.forEach((input, idx) => {
+          input.addEventListener('input', () => {
+            input.value = input.value.replace(/\D/g, '').slice(0, 1);
+            if (input.value && idx < otpInputs.length - 1) {
+              otpInputs[idx + 1].focus();
+            }
+          });
+
+          input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && idx > 0) {
+              otpInputs[idx - 1].focus();
+            }
+          });
+        });
+
+        /* --------------------------------------------------------------------
+           9. 3-STEP ONBOARDING WIZARD CONTROLLER
+           -------------------------------------------------------------------- */
+        const wizardForm = document.getElementById('wizardForm');
+        const wizardStepPanes = document.querySelectorAll('.wizard-step-pane');
+        const wizardIndicators = document.querySelectorAll('[data-step-indicator]');
+        const wizardProgressBar = document.getElementById('wizardProgressBar');
+        const wizardPrevBtn = document.getElementById('wizardPrevBtn');
+        const wizardNextBtn = document.getElementById('wizardNextBtn');
+        const wizardFinishBtn = document.getElementById('wizardFinishBtn');
+        const wizardSuccessBox = document.getElementById('wizardSuccessBox');
+        const wizardSuccessText = document.getElementById('wizardSuccessText');
+        const wizardRestartBtn = document.getElementById('wizardRestartBtn');
+        const wizAccentSelect = document.getElementById('wizAccentSelect');
+        const wizSyncLiveAccent = document.getElementById('wizSyncLiveAccent');
+
+        let currentWizardStep = 1;
+
+        function updateWizardUI() {
+          wizardStepPanes.forEach((pane) => {
+            const stepNum = Number(pane.getAttribute('data-wizard-step'));
+            pane.classList.toggle('d-none', stepNum !== currentWizardStep);
+          });
+
+          wizardIndicators.forEach((circle) => {
+            const stepNum = Number(circle.getAttribute('data-step-indicator'));
+            circle.classList.remove('active', 'completed');
+            if (stepNum < currentWizardStep) {
+              circle.classList.add('completed');
+              circle.textContent = '✓';
+            } else {
+              if (stepNum === currentWizardStep) circle.classList.add('active');
+              circle.textContent = String(stepNum);
+            }
+          });
+
+          if (wizardProgressBar) {
+            const pct = currentWizardStep === 1 ? 33 : currentWizardStep === 2 ? 66 : 100;
+            wizardProgressBar.style.width = `${pct}%`;
+            wizardProgressBar.setAttribute('aria-valuenow', String(pct));
+          }
+
+          if (wizardPrevBtn) wizardPrevBtn.disabled = currentWizardStep === 1;
+          if (wizardNextBtn) wizardNextBtn.classList.toggle('d-none', currentWizardStep === 3);
+          if (wizardFinishBtn) wizardFinishBtn.classList.toggle('d-none', currentWizardStep !== 3);
+
+          // Populate step 3 live review summary
+          if (currentWizardStep === 3) {
+            const pName = document.getElementById('wizProjectName')?.value.trim() || 'Untitled Project';
+            const pEmail = document.getElementById('wizOwnerEmail')?.value.trim() || '—';
+            const pAccent = wizAccentSelect?.value || 'indigo';
+            const pNeutral = document.getElementById('wizNeutralSelect')?.value || 'slate';
+
+            const revName = document.getElementById('wizReviewName');
+            const revEmail = document.getElementById('wizReviewEmail');
+            const revAccent = document.getElementById('wizReviewAccent');
+            const revNeutral = document.getElementById('wizReviewNeutral');
+
+            if (revName) revName.textContent = pName;
+            if (revEmail) revEmail.textContent = pEmail;
+            if (revAccent) revAccent.textContent = `${pAccent}-600`;
+            if (revNeutral) revNeutral.textContent = pNeutral;
+          }
+        }
+
+        // Optional live accent sync from Step 2
+        if (wizAccentSelect) {
+          wizAccentSelect.addEventListener('change', () => {
+            if (wizSyncLiveAccent && wizSyncLiveAccent.checked) {
+              const selected = wizAccentSelect.value;
+              const matchingDot = document.querySelector(`.accent-dot[data-accent="${selected}"]`);
+              if (matchingDot) matchingDot.click();
+            }
+          });
+        }
+
+        if (wizardNextBtn) {
+          wizardNextBtn.addEventListener('click', () => {
+            if (currentWizardStep === 1) {
+              const nameInput = document.getElementById('wizProjectName');
+              const emailInput = document.getElementById('wizOwnerEmail');
+              const nameOk = nameInput && nameInput.checkValidity();
+              const emailOk = emailInput && emailInput.checkValidity();
+
+              if (nameInput) nameInput.classList.toggle('is-invalid', !nameOk);
+              if (emailInput) emailInput.classList.toggle('is-invalid', !emailOk);
+
+              if (!nameOk || !emailOk) {
+                showToast('Please complete Step 1 before continuing.');
+                return;
+              }
+              nameInput.classList.add('is-valid');
+              emailInput.classList.add('is-valid');
+            }
+            if (currentWizardStep < 3) {
+              currentWizardStep += 1;
+              updateWizardUI();
+            }
+          });
+        }
+
+        if (wizardPrevBtn) {
+          wizardPrevBtn.addEventListener('click', () => {
+            if (currentWizardStep > 1) {
+              currentWizardStep -= 1;
+              updateWizardUI();
+            }
+          });
+        }
+
+        if (wizardForm) {
+          wizardForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const pName = document.getElementById('wizProjectName')?.value.trim() || 'Project';
+            const pAccent = wizAccentSelect?.value || 'indigo';
+            const pNeutral = document.getElementById('wizNeutralSelect')?.value || 'slate';
+
+            if (wizardSuccessText && wizardSuccessBox) {
+              wizardSuccessText.textContent = `Ready for "${pName}" using Tailwind ${pAccent}-600 primary & ${pNeutral} surfaces.`;
+              wizardSuccessBox.classList.remove('d-none');
+            }
+            showToast(`Theme kit provisioned for ${pName}!`);
+          });
+        }
+
+        if (wizardRestartBtn && wizardForm) {
+          wizardRestartBtn.addEventListener('click', () => {
+            wizardForm.reset();
+            wizardForm.querySelectorAll('.is-valid, .is-invalid').forEach((el) => {
+              el.classList.remove('is-valid', 'is-invalid');
+            });
+            if (wizardSuccessBox) wizardSuccessBox.classList.add('d-none');
+            currentWizardStep = 1;
+            updateWizardUI();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
